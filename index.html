@@ -3,95 +3,220 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Indra | Portfolio</title>
+  <title>Indra Kumar V — Cyber Security</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
 
+  <div class="grid-overlay" aria-hidden="true"></div>
+
   <!-- NAVBAR -->
-  <nav>
-    <div class="container">
-      <h2>Indra Kumar V</h2>
-      <ul>
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-brand"><span class="brand-bracket">[</span>Indra<span class="brand-bracket">]</span></a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#labs">Labs</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="docs/IndraKumar_CV.pdf" download class="cv-button">Download CV</a></li>
+        <li><a href="docs/IndraKumar_CV.pdf" download class="btn-outline">↓ Resume</a></li>
       </ul>
     </div>
   </nav>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-content">
-    
-    <div class="hero-text">
-      <h1>Hi, I'm <span>Indra Kumar</span></h1>
-      <p class="subtitle">
-        Computer Science & Engineering (Cyber Security)
-      </p>
-      <p class="desc">
-        Cyber Security undergraduate focused on defensive security, system monitoring,
-        and real-world investigation workflows - with hands-on experience in vulnerability
-        assessment, network traffic analysis, and <br>security-focused backend systems.
-      </p>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner container">
+      <div class="hero-text">
+        <p class="hero-tag"><span class="tag-dot"></span> Open to SOC / Cybersecurity roles</p>
+        <h1 class="hero-name">Indra <span class="name-last">Kumar V</span></h1>
+        <p class="hero-role">Cybersecurity Engineer · SOC Analyst</p>
+        <p class="hero-desc">
+          Builder and breaker — developing security tools by day, hunting on TryHackMe by night.
+          B.E. Cyber Security student skilled in threat detection, log analysis, and security monitoring.
+          IEEE-published researcher and Tamil Nadu Cyber Crime Wing intern.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#contact" class="btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="profile-ring">
+          <img src="assets/profile.png" alt="Indra Kumar V" class="profile-img">
+        </div>
+        <div class="hero-stat-bar">
+          <div class="stat"><span class="stat-n">2</span><span class="stat-l">Internships</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-n">6</span><span class="stat-l">Projects</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-n">Top 10%</span><span class="stat-l">TryHackMe</span></div>
+        </div>
+      </div>
     </div>
-
-    <div class="hero-image">
-      <img src="assets/profile.png" alt="Indra Kumar">
+    <div class="hero-scroll-hint">
+      <span>scroll</span>
+      <div class="scroll-line"></div>
     </div>
-
-  </div>
-</section>
+  </section>
 
   <!-- ABOUT -->
   <section id="about">
     <div class="container">
-      <h2>About Me</h2>
-      <ul>
-  <li>I am a <span class="highlight">Computer Science and Engineering</span> undergraduate specializing in <span class="highlight">Cyber Security</span>.</li>
-  <li>I have solid fundamentals in <span class="highlight">Data Structures</span>, <span class="highlight">Algorithms</span>, and <span class="highlight">OOP</span>.</li>
-  <li>Through internships, I’ve gained hands-on experience in <span class="highlight">vulnerability assessment</span> and <span class="highlight">network traffic analysis</span>.</li>
-</ul>
-
+      <div class="section-label">01 / ABOUT</div>
+      <h2 class="section-title">Who I Am</h2>
+      <div class="about-grid">
+        <div class="about-body">
+          <p>
+            I'm a <mark>Computer Science & Engineering</mark> undergraduate specializing in
+            <mark>Cyber Security</mark> at <mark>Dr. N.G.P. Institute of Technology</mark>,
+            graduating in <mark>2027</mark> with a CGPA of <mark>7.95</mark>. My focus sits at
+            the intersection of defensive security and engineering — building tools that detect,
+            investigate, and neutralize threats.
+          </p>
+          <p>
+            I build <mark>Python/Flask tools</mark> for threat intelligence automation, domain
+            security analysis, and web integrity monitoring. Seeking a
+            <mark>Cybersecurity or SOC Analyst</mark> role to strengthen real-world detection
+            and incident response capabilities.
+          </p>
+          <div class="lang-row">
+            <span class="lang-badge"><i class="fas fa-language"></i> English — Professional</span>
+            <span class="lang-badge"><i class="fas fa-language"></i> Tamil — Native</span>
+            <span class="lang-badge"><i class="fas fa-language"></i> Hindi — Basic</span>
+          </div>
+        </div>
+        <div class="about-tags">
+          <div class="tag-item"><i class="fas fa-shield-alt"></i> Threat Intelligence</div>
+          <div class="tag-item"><i class="fas fa-search"></i> OSINT Analysis</div>
+          <div class="tag-item"><i class="fas fa-code"></i> Security Automation</div>
+          <div class="tag-item"><i class="fas fa-network-wired"></i> Network Forensics</div>
+          <div class="tag-item"><i class="fas fa-bug"></i> Vulnerability Assessment</div>
+          <div class="tag-item"><i class="fas fa-chart-bar"></i> SIEM / Splunk</div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- SKILLS -->
   <section id="skills">
     <div class="container">
-      <h2>Skills</h2>
+      <div class="section-label">02 / SKILLS</div>
+      <h2 class="section-title">Technical Arsenal</h2>
+      <div class="skills-grid">
 
-      <div class="card-container">
-        <div class="card">
-          <h3><i class="fas fa-shield-alt"></i> Cyber Security & Networking</h3>
-          <p>Vulnerability Assessment (OWASP Top 10), Network Traffic Analysis (Wireshark),
-            DNS & Email Security, Web Application Security fundamentals.</p>
+        <div class="skill-card">
+          <div class="scanline"></div>
+          <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3>Cybersecurity</h3>
+          <ul class="skill-list">
+            <li>Threat Intelligence & OSINT Analysis</li>
+            <li>Vulnerability Assessment (OWASP Top 10)</li>
+            <li>Incident Response Basics</li>
+            <li>Web Application Security</li>
+          </ul>
         </div>
 
-        <div class="card">
-          <h3><i class="fas fa-code"></i> Programming & Backend</h3>
-          <p> Python, Java, SQL, C,  Flask,  REST APIs,  MySQL, 
-            Security automation using Python.</p>
+        <div class="skill-card">
+          <div class="scanline"></div>
+          <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
+          <h3>Networking</h3>
+          <ul class="skill-list">
+            <li>TCP/IP, DNS, HTTP/HTTPS</li>
+            <li>OSI Model & Subnetting</li>
+            <li>Network Traffic Analysis (Wireshark)</li>
+            <li>DNS & Email Security (SPF, DKIM, DMARC)</li>
+          </ul>
         </div>
 
-        <div class="card">
-          <h3><i class="fas fa-microchip"></i> Core Computer Science</h3>
-          <p>Data Structures & Algorithms, OOPS, Software Design,
-            Time & Space Complexity.</p>
+        <div class="skill-card">
+          <div class="scanline"></div>
+          <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+          <h3>Programming & Backend</h3>
+          <ul class="skill-list">
+            <li>Python — Security Automation</li>
+            <li>Java, SQL, Flask</li>
+            <li>APIs, Threat Feeds Integration</li>
+            <li>MySQL, D3.js Visualizations</li>
+          </ul>
         </div>
 
-        <div class="card">
-          <h3><i class="fas fa-tools"></i> Tools & Platforms</h3>
-          <p>Linux (Parrot OS), Git, GitHub, VS Code,
-            Nmap, Wireshark, Burp Suite (Basic), Metasploit (Basic).</p>
+        <div class="skill-card">
+          <div class="scanline"></div>
+          <div class="skill-icon"><i class="fas fa-tools"></i></div>
+          <h3>Tools & Platforms</h3>
+          <ul class="skill-list">
+            <li>Nmap, Wireshark, Burp Suite, OWASP ZAP</li>
+            <li>Metasploit, Splunk (SIEM)</li>
+            <li>Kali Linux, Parrot OS, Windows</li>
+            <li>Git, GitHub, TryHackMe (Top 10%)</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LABS -->
+  <section id="labs">
+    <div class="container">
+      <div class="section-label">03 / LABS</div>
+      <h2 class="section-title">Security Labs & Practical Training</h2>
+      <div class="labs-card">
+        <div class="labs-left">
+          <div class="labs-brand">
+            <i class="fas fa-user-secret"></i>
+            <div>
+              <h3>TryHackMe</h3>
+              <p>Hands-on Cybersecurity Labs</p>
+            </div>
+          </div>
+          <div class="labs-stat-row">
+            <div class="labs-stat">
+              <span class="ls-num">Top 10%</span>
+              <span class="ls-label">Global Rank</span>
+            </div>
+            <div class="labs-stat">
+              <span class="ls-num">56+</span>
+              <span class="ls-label">Labs Completed</span>
+            </div>
+          </div>
+          <a href="https://tryhackme.com/p/indra02" target="_blank" class="btn-primary">
+            <i class="fas fa-external-link-alt"></i> View Profile
+          </a>
+        </div>
+        <div class="labs-right">
+          <div class="labs-item">
+            <i class="fas fa-shield-alt"></i>
+            <div>
+              <strong>Blue Team Operations</strong>
+              <p>Log analysis, threat hunting, and network monitoring in simulated SOC environments</p>
+            </div>
+          </div>
+          <div class="labs-item">
+            <i class="fas fa-globe"></i>
+            <div>
+              <strong>Network & Web Security</strong>
+              <p>56+ labs covering network security, web vulnerabilities, and threat detection</p>
+            </div>
+          </div>
+          <div class="labs-item">
+            <i class="fas fa-crosshairs"></i>
+            <div>
+              <strong>Offensive Security</strong>
+              <p>Reconnaissance, vulnerability exploitation, and incident analysis in simulated attack environments</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -100,38 +225,62 @@
   <!-- EXPERIENCE -->
   <section id="experience">
     <div class="container">
-      <h2>Experience</h2>
-
+      <div class="section-label">04 / EXPERIENCE</div>
+      <h2 class="section-title">Work History</h2>
       <div class="timeline">
-        <div class="timeline-item">
-          <h3>
-            <i class="fas fa-shield-alt"></i>
-            Cybersecurity Intern — Hackup Technology
-          </h3>
-          <p class="duration">15 Days</p>
-          <p>
-            Performed <span class="highlight">vulnerability assessments</span> using
-            <span class="highlight">OWASP Top 10</span> scenarios, analyzed
-            <span class="highlight">network traffic</span> using
-            <span class="highlight">Wireshark</span>, and documented attack simulations
-            to understand secure application behavior.
-          </p>
+
+        <div class="tl-item">
+          <div class="tl-meta">
+            <span class="tl-date">Dec 2024 – Jan 2025</span>
+            <span class="tl-duration">45 Days</span>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-title">Cyber Crime Intern</h3>
+                <p class="tl-company"><i class="fas fa-building"></i> Tamil Nadu Cyber Crime Wing</p>
+              </div>
+              <span class="tl-badge">Government</span>
+            </div>
+            <p class="tl-desc">
+              Engineered <strong>FundTrail Analysis Tool</strong>, a Flask–MySQL backend system to manage
+              and analyze financial fraud cases across 5+ active investigations. Constructed modules for
+              complaint tracking, officer management, analytics dashboards, and fund-flow visualization.
+              Performed log analysis and transaction monitoring to identify suspicious patterns across
+              structured financial datasets.
+            </p>
+            <div class="tl-tags">
+              <span>Flask</span><span>MySQL</span><span>Log Analysis</span>
+              <span>Financial Forensics</span><span>Python</span>
+            </div>
+          </div>
         </div>
 
-        <div class="timeline-item">
-          <h3>
-            <i class="fas fa-briefcase"></i>
-            Cyber Crime Intern — Tamil Nadu Cyber Crime Wing
-          </h3>
-          <p class="duration">45 Days</p>
-          <p>
-            Developed <span class="highlight">FundTrail</span>, a
-            <span class="highlight">Flask–MySQL</span> backend system for
-            <span class="highlight">financial fraud investigations</span>,
-            including complaint tracking, analytics dashboards, and
-            <span class="highlight">fund-flow visualization</span>.
-          </p>
+        <div class="tl-item">
+          <div class="tl-meta">
+            <span class="tl-date">Jun 2024</span>
+            <span class="tl-duration">15 Days</span>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-title">Cybersecurity Intern</h3>
+                <p class="tl-company"><i class="fas fa-building"></i> Hackup Technology</p>
+              </div>
+              <span class="tl-badge">Private</span>
+            </div>
+            <p class="tl-desc">
+              Executed vulnerability assessments across multiple test web applications using OWASP Top 10
+              attack scenarios. Analyzed network traffic packets using Wireshark to identify abnormal
+              request patterns. Documented vulnerabilities and simulated attack scenarios to build a
+              structured security assessment report.
+            </p>
+            <div class="tl-tags">
+              <span>OWASP Top 10</span><span>Wireshark</span><span>Pentest</span><span>Reporting</span>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -139,90 +288,94 @@
   <!-- PROJECTS -->
   <section id="projects">
     <div class="container">
-      <h2>Projects</h2>
+      <div class="section-label">05 / PROJECTS</div>
+      <h2 class="section-title">Selected Work</h2>
+      <div class="projects-grid">
 
-      <div class="card-container">
-        <div class="card project-card">
-          <h3>
-            <i class="fas fa-globe"></i>
-            DNS Record Finder for Bug Bounty
-          </h3>
-
-          <p class="project-desc">
-            Python-based tool to collect and analyze DNS records such as MX, DMARC, TXT,
-            and CNAME to support security reconnaissance.
-          </p>
-
-          <div class="tech-stack">
-            <!-- <span><Strong>Tech Stack:</Strong></span> -->
-            <span>Python</span>
-            <span>DNS</span>
-            <span>Bug Bounty</span>
+        <div class="proj-card featured">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-crosshairs"></i></div>
+            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
+          </div>
+          <h3>Asset-Centric Threat Intelligence</h3>
+          <p class="proj-sub">Threat Intelligence Automation Tool</p>
+          <p class="proj-desc">Python-based platform analyzing security indicators across domains, IPs, and URLs. Integrated OSINT threat feeds and reputation databases to detect IOCs. Implemented DNS intelligence analysis, IP reputation scoring, and port exposure monitoring. Flask dashboard for visualization and automated reports.</p>
+          <div class="proj-stack">
+            <span>Python</span><span>Flask</span><span>OSINT</span><span>Threat Feeds</span><span>IOC Detection</span>
           </div>
         </div>
 
-        <div class="card project-card">
-          <h3>
-            <!-- <i class="fas fa-magnifying-glass-chart"></i> -->
-            <!-- <i class="fas fa-chart-line"></i> -->
-             <i class="fas fa-scale-balanced"></i>
-            FundTrail - Financial Transaction Analysis
-          </h3>
-
-          <p class="project-desc">
-            Flask – MySQL backend system to analyze multi-layered fund transfers
-            in real cybercrime investigation scenarios.
-          </p>
-
-          <div class="tech-stack">
-            <!-- <span><Strong>Tech Stack:</Strong></span> -->
-            <span>Flask</span>
-            <span>MySQL</span>
-            <span>Cyber Crime</span>
+        <div class="proj-card featured">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-globe"></i></div>
+            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
+          </div>
+          <h3>Domain Security Analysis</h3>
+          <p class="proj-sub">DNS Security Posture Assessment</p>
+          <p class="proj-desc">Flask-based tool to analyze domain security through DNS configuration. Automated detection of MX, SPF, DKIM, DMARC records and DNSSEC validation. HTTPS verification and port scanning to identify exposed services. Generates security assessment reports with risk scoring. <span class="proj-award"><i class="fas fa-star"></i> Best Project Award</span></p>
+          <div class="proj-stack">
+            <span>Flask</span><span>DNS</span><span>DMARC/SPF/DKIM</span><span>Risk Scoring</span>
           </div>
         </div>
-        <div class="card project-card">
-          <h3>
-            <i class="fas fa-network-wired"></i>
-            PortGuardian - Port Watch & Alert Automation
-          </h3>
 
-          <p class="project-desc">
-            Python-based monitoring system to detect unauthorized port changes,
-            log port states, and generate security alerts.
-          </p>
-
-          <div class="tech-stack">
-            <!-- <span><Strong>Tech Stack:</Strong></span> -->
-            <span>Python</span>
-            <span>Monitoring</span>
-            <span>Security</span>
+        <div class="proj-card">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-shield-virus"></i></div>
+            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
+          </div>
+          <h3>TamperTrace</h3>
+          <p class="proj-sub">Web Integrity Monitoring System</p>
+          <p class="proj-desc">Detects unauthorized website modifications using cryptographic hash verification. Automated monitoring with scheduled scans and real-time tamper alerts. Flask dashboard with automated website backup and restoration.</p>
+          <div class="proj-stack">
+            <span>Python</span><span>SHA Hashing</span><span>Flask</span><span>MySQL</span>
           </div>
         </div>
-        <div class="card project-card">
-          <h3>
-            <i class="fas fa-shield-virus"></i>
-            Tamper Trace - Web Integrity Monitoring
-          </h3>
 
-          <p class="project-desc">
-            TamperTrace is a security monitoring system that detects unauthorized 
-            website changes and web defacement using cryptographic hashing and content analysis. 
-            It continuously monitors web pages, identifies integrity violations, triggers real-time 
-            alerts, and helps restore trusted website content to maintain security and reliability.
-          </p>
-
-          <div class="tech-stack">
-            <!-- <span><Strong>Tech Stack:</Strong></span> -->
-            <span>Python</span>
-            <span>Hashing Algorithms</span>
-            <span>HTML</span>
-            <span>Web Security</span>
-            <span>MySQL</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+        <div class="proj-card">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-scale-balanced"></i></div>
+            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
+          </div>
+          <h3>FundTrail</h3>
+          <p class="proj-sub">Financial Transaction Analysis Tool</p>
+          <p class="proj-desc">Web-based investigation platform to analyze financial transaction trails. Automated Excel parsing and transaction normalization using Python. MySQL-backed dashboards and D3.js visualizations for tracing suspicious fund movements.</p>
+          <div class="proj-stack">
+            <span>Flask</span><span>MySQL</span><span>D3.js</span><span>Python</span>
           </div>
         </div>
+
+        <div class="proj-card">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-network-wired"></i></div>
+            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
+          </div>
+          <h3>PortGuardian</h3>
+          <p class="proj-sub">Port Watch & Alert Automation</p>
+          <p class="proj-desc">Detects unauthorized port changes, logs port states, and generates real-time security alerts for proactive network monitoring.</p>
+          <div class="proj-stack">
+            <span>Python</span><span>Monitoring</span><span>Alerting</span>
+          </div>
+        </div>
+
+        <div class="proj-card">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-search"></i></div>
+            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
+          </div>
+          <h3>DNS Record Finder</h3>
+          <p class="proj-sub">Bug Bounty Reconnaissance</p>
+          <p class="proj-desc">Collects and analyzes DNS records (MX, DMARC, TXT, CNAME) to support security reconnaissance in bug bounty workflows. <span class="proj-award"><i class="fas fa-star"></i> Best Mini Project Award</span></p>
+          <div class="proj-stack">
+            <span>Python</span><span>DNS</span><span>Bug Bounty</span>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
@@ -230,44 +383,45 @@
   <!-- ACHIEVEMENTS -->
   <section id="achievements">
     <div class="container">
-      <h2>Achievements & Certifications</h2>
+      <div class="section-label">06 / ACHIEVEMENTS</div>
+      <h2 class="section-title">Recognition & Growth</h2>
+      <div class="ach-grid">
 
-      <div class="achievements-grid">
-
-        <!-- CERTIFICATIONS -->
-        <div class="card achievement-card">
-          <h3>
-            <i class="fas fa-certificate"></i>
-            Certifications & Courses
-          </h3>
+        <div class="ach-card">
+          <div class="scanline"></div>
+          <div class="ach-num">01</div>
+          <div class="ach-icon"><i class="fas fa-certificate"></i></div>
+          <h3>Certifications</h3>
           <ul>
-            <li>NPTEL – Privacy and Security in Online Social Media</li>
-            <li>NPTEL – Practical Cyber Security for Cyber Security Practitioners</li>
+            <li>NPTEL – Practical Cyber Security <span class="cert-badge">Elite + Gold · 2025</span></li>
+            <li>NPTEL – Cyber Security and Privacy <span class="cert-badge">2024</span></li>
+            <li>NPTEL – Privacy & Security in Online Social Media <span class="cert-badge">Elite · 2025</span></li>
+            <li>EC-Council – Network Security Lab (Practical) <span class="cert-badge">2026</span></li>
+            <li>EC-Council – Kali Linux for Penetration Testers <span class="cert-badge">2026</span></li>
           </ul>
         </div>
 
-        <!-- RESEARCH & WORKSHOPS -->
-        <div class="card achievement-card">
-          <h3>
-            <i class="fas fa-flask"></i>
-            Research & Workshops
-          </h3>
+        <div class="ach-card">
+          <div class="scanline"></div>
+          <div class="ach-num">02</div>
+          <div class="ach-icon"><i class="fas fa-award"></i></div>
+          <h3>Awards & Research</h3>
           <ul>
-            <li>International Conference Paper – Ransomware Attack on Healthcare Organizations</li>
-            <li>DRDO Workshop – Cyber Threat Detection Using Deep Learning</li>
-            <li>CSIR Seminar – In-Vehicle Intrusion Detection Systems</li>
+            <li>IEEE RICE-2025 — Ransomware Attacks on Healthcare Organizations, Hyderabad</li>
+            <li>International Conference — Engineering & Technology, UAE (2024)</li>
+            <li>Best Project Award — Domain Security Analysis (Intra-college Expo)</li>
+            <li>Best Mini Project Award — DNS Record Finder</li>
           </ul>
         </div>
 
-        <!-- HACKATHONS -->
-        <div class="card achievement-card">
-          <h3>
-            <i class="fas fa-trophy"></i>
-            Hackathons
-          </h3>
+        <div class="ach-card">
+          <div class="scanline"></div>
+          <div class="ach-num">03</div>
+          <div class="ach-icon"><i class="fas fa-trophy"></i></div>
+          <h3>Hackathons</h3>
           <ul>
-            <li>Smart India Hackathon (SIH) 2024</li>
-            <li>Pentathon 2025 – Cybersecurity Hackathon</li>
+            <li>Smart India Hackathon (SIH) 2024 — Drones & Technology Track, real-time disaster information aggregation system</li>
+            <li>Pentathon 2025 — CTF challenges in cryptography, reverse engineering, and web exploitation</li>
           </ul>
         </div>
 
@@ -276,49 +430,140 @@
   </section>
 
   <!-- CONTACT -->
-
   <section id="contact">
-    <div class="container" style="display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap;">
-      
-      <!-- Contact Info -->
-      <div class="contact-info" style="flex: 1;">
-        <h2>Contact</h2>
-        <p><i class="fas fa-envelope"></i> <strong>Email:</strong> indrakumarvelusamy@gmail.com</p>
-        <p><i class="fas fa-location-dot"></i> <strong>Location:</strong> Avinashi, Tamil Nadu, India</p>
-        <div class="contact-links">
-        <a href="https://www.linkedin.com/in/indra0210/" target="_blank">
-          <i class="fab fa-linkedin"></i> LinkedIn
-        </a>
-
-        <a href="https://github.com/Indraik" target="_blank">
-          <i class="fab fa-github"></i> GitHub
-        </a>
-
-        <a href="https://tryhackme.com/p/indra02" target="_blank">
-          <i class="fas fa-user-secret"></i> TryHackMe
-        </a>
-          <!-- <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a>
-          <a href="#"><i class="fab fa-github"></i> GitHub</a>
-          <a href="#"><i class="fas fa-user-secret"></i> TryHackMe</a> -->
+    <div class="container">
+      <div class="section-label">07 / CONTACT</div>
+      <h2 class="section-title">Let's Connect</h2>
+      <div class="contact-grid">
+        <div class="contact-left">
+          <p class="contact-intro">
+            Seeking a <strong>Cybersecurity or SOC Analyst</strong> role to strengthen
+            real-world detection and incident response capabilities. Feel free to reach out.
+          </p>
+          <div class="contact-detail">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <span class="cd-label">Email</span>
+              <a href="mailto:indrakumarvelusamy@gmail.com">indrakumarvelusamy@gmail.com</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-phone"></i>
+            <div>
+              <span class="cd-label">Phone</span>
+              <a href="tel:+919965716838">+91 99657 16838</a>
+            </div>
+          </div>
+          <div class="contact-detail">
+            <i class="fas fa-location-dot"></i>
+            <div>
+              <span class="cd-label">Location</span>
+              <span>Avinashi, Tamil Nadu, India</span>
+            </div>
+          </div>
+          <div class="social-row">
+            <a href="https://www.linkedin.com/in/indra0210/" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Indraik" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://tryhackme.com/p/indra02" target="_blank" class="social-btn"><i class="fas fa-user-secret"></i> TryHackMe</a>
+          </div>
         </div>
+
+        <form class="contact-form" action="https://formspree.io/f/xlgppgaz" method="POST" id="contact-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary full-width">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <p class="form-status" id="form-status"></p>
+        </form>
       </div>
-
-      <!-- Contact Form -->
-      <form class="contact-form" style="flex: 1; min-width: 300px;">
-        <label for="name">Name:</label>
-        <input type="text" id="name" name="name" required>
-
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" rows="4" required></textarea>
-
-        <button type="submit">Send Message</button>
-      </form>
-
     </div>
   </section>
 
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner container">
+      <span class="footer-brand"><span class="brand-bracket">[</span>IK<span class="brand-bracket">]</span> Indra Kumar V</span>
+      <span class="footer-copy">© 2026 · Designed & Built by Indra</span>
+      <div class="footer-links">
+        <a href="https://github.com/Indraik" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/indra0210/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://tryhackme.com/p/indra02" target="_blank"><i class="fas fa-user-secret"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    document.querySelectorAll('.skill-card, .proj-card, .ach-card, .tl-card').forEach(card => {
+      card.addEventListener('mousemove', (e) => {
+        const r  = card.getBoundingClientRect();
+        const rx = ((e.clientY - r.top  - r.height/2) / (r.height/2)) * -6;
+        const ry = ((e.clientX - r.left - r.width /2) / (r.width /2)) *  6;
+        card.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+        card.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+      });
+      card.addEventListener('mouseleave', () => {
+        card.style.setProperty('--rx', '0deg');
+        card.style.setProperty('--ry', '0deg');
+      });
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('nav-links');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      hamburger.classList.toggle('active');
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      });
+    });
+
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+
+    const scrollBtn = document.getElementById('scrollTop');
+    window.addEventListener('scroll', () => scrollBtn.classList.toggle('visible', window.scrollY > 500));
+    scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.skill-card, .proj-card, .tl-item, .ach-card, .labs-card').forEach(el => {
+      el.classList.add('reveal'); observer.observe(el);
+    });
+
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const btn = form.querySelector('button[type="submit"]');
+      btn.textContent = 'Sending…'; btn.disabled = true;
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
+        if (res.ok) { status.textContent = '✓ Message sent — I\'ll be in touch soon.'; status.className = 'form-status success'; form.reset(); }
+        else throw new Error();
+      } catch { status.textContent = '✗ Something went wrong. Please try again.'; status.className = 'form-status error'; }
+      btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message'; btn.disabled = false;
+    });
+  </script>
 </body>
 </html>
