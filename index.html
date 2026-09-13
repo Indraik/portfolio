@@ -3,7 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Indra Kumar V — Cyber Security</title>
+  <title>Indra Kumar V — Cybersecurity Engineer & Software Developer</title>
+  <meta name="description" content="Portfolio of Indra Kumar V — Cybersecurity Engineer & Software Developer. Specialized in threat intelligence automation, full-stack development (React, Spring Boot, Flask), log correlation, and 460+ LeetCode problem solving in Java."/>
+  <meta name="keywords" content="Indra Kumar V, Cybersecurity Engineer, Software Developer, SOC Analyst, Full-Stack Developer, Threat Intelligence, React, Spring Boot, Flask, Python, Java, LeetCode, TryHackMe"/>
+  <meta name="author" content="Indra Kumar V"/>
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:type" content="website"/>
+  <meta property="og:url" content="https://indraik.github.io/portfolio/"/>
+  <meta property="og:title" content="Indra Kumar V — Cybersecurity Engineer & Software Developer"/>
+  <meta property="og:description" content="Builder & breaker — engineering automated security platforms and full-stack software. 460+ LeetCode problems solved, Top 10% TryHackMe, IEEE-published researcher."/>
+  <meta property="og:image" content="assets/profile.png"/>
+
+  <!-- Twitter Meta -->
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:title" content="Indra Kumar V — Cybersecurity Engineer & Software Developer"/>
+  <meta name="twitter:description" content="Builder & breaker — engineering automated security platforms and full-stack software. 460+ LeetCode, Top 10% TryHackMe."/>
+  <meta name="twitter:image" content="assets/profile.png"/>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -18,36 +35,43 @@
   <nav id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-brand"><span class="brand-bracket">[</span>Indra<span class="brand-bracket">]</span></a>
-      <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="nav-actions">
+        <button class="cmd-palette-trigger" id="openPalette" aria-label="Open Command Palette (Ctrl+K)" title="Command Palette (Ctrl+K)">
+          <i class="fas fa-terminal"></i> <span class="cmd-shortcut">⌘K</span>
+        </button>
+        <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#labs">Labs</a></li>
+        <li><a href="#labs">Labs & Code</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="docs/IndraKumar_CV.pdf" download class="btn-outline">↓ Resume</a></li>
+        <li><a href="docs/IndraKumar_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-outline">↓ Resume</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
+    <canvas id="heroCanvas" class="hero-canvas"></canvas>
     <div class="hero-inner container">
       <div class="hero-text">
-        <p class="hero-tag"><span class="tag-dot"></span> Open to SOC / Cybersecurity roles</p>
+        <p class="hero-tag"><span class="tag-dot"></span> <span id="hero-typewriter" class="typewriter-text">Open to Software Development roles &amp; Security Engineering</span><span class="typewriter-cursor">|</span></p>
         <h1 class="hero-name">Indra <span class="name-last">Kumar V</span></h1>
-        <p class="hero-role">Cybersecurity Engineer · SOC Analyst</p>
+        <p class="hero-role">Cybersecurity Engineer · Full-Stack & Software Developer</p>
         <p class="hero-desc">
-          Builder and breaker — developing security tools by day, hunting on TryHackMe by night.
-          B.E. Cyber Security student skilled in threat detection, log analysis, and security monitoring.
-          IEEE-published researcher and Tamil Nadu Cyber Crime Wing intern.
+          Builder and breaker — architecting full-stack applications and automated security platforms by day,
+          hunting on TryHackMe and solving algorithmic challenges by night. B.E. Cyber Security undergraduate
+          skilled in threat detection, Python/Java backend systems, React/Spring Boot development, and financial fraud forensics.
         </p>
         <div class="hero-actions">
-          <a href="#projects" class="btn-primary">View Projects</a>
+          <a href="#projects" class="btn-primary"><i class="fas fa-folder-open"></i> View Projects</a>
+          <a href="https://leetcode.com/u/Indrakumar_V/" target="_blank" rel="noopener noreferrer" class="btn-ghost"><i class="fas fa-code"></i> LeetCode (<span id="hero-lc-count">468</span>)</a>
           <a href="#contact" class="btn-ghost">Get In Touch</a>
         </div>
       </div>
@@ -58,9 +82,11 @@
         <div class="hero-stat-bar">
           <div class="stat"><span class="stat-n">2</span><span class="stat-l">Internships</span></div>
           <div class="stat-div"></div>
-          <div class="stat"><span class="stat-n">6</span><span class="stat-l">Projects</span></div>
+          <div class="stat"><span class="stat-n" id="hero-lc-stat">468+</span><span class="stat-l">LeetCode Solved</span></div>
           <div class="stat-div"></div>
           <div class="stat"><span class="stat-n">Top 10%</span><span class="stat-l">TryHackMe</span></div>
+          <div class="stat-div"></div>
+          <div class="stat"><span class="stat-n">8+</span><span class="stat-l">Projects</span></div>
         </div>
       </div>
     </div>
@@ -74,36 +100,116 @@
   <section id="about">
     <div class="container">
       <div class="section-label">01 / ABOUT</div>
-      <h2 class="section-title">Who I Am</h2>
+      <h2 class="section-title">Who I Am & Engineering Thesis</h2>
       <div class="about-grid">
         <div class="about-body">
-          <p>
-            I'm a <mark>Computer Science & Engineering</mark> undergraduate specializing in
-            <mark>Cyber Security</mark> at <mark>Dr. N.G.P. Institute of Technology</mark>,
-            graduating in <mark>2027</mark> with a CGPA of <mark>7.95</mark>. My focus sits at
-            the intersection of defensive security and engineering — building tools that detect,
-            investigate, and neutralize threats.
-          </p>
-          <p>
-            I build <mark>Python/Flask tools</mark> for threat intelligence automation, domain
-            security analysis, and web integrity monitoring. Seeking a
-            <mark>Cybersecurity or SOC Analyst</mark> role to strengthen real-world detection
-            and incident response capabilities.
-          </p>
+          <div class="about-nav-tabs">
+            <button class="about-tab-btn active" data-tab="persona"><i class="fas fa-user-astronaut"></i> The Persona</button>
+            <button class="about-tab-btn" data-tab="philosophy"><i class="fas fa-layer-group"></i> Architecture Philosophy</button>
+            <button class="about-tab-btn" data-tab="creed"><i class="fas fa-shield-halved"></i> Operational Creed</button>
+          </div>
+
+          <!-- Tab 1: Persona -->
+          <div class="about-pane active" id="tab-persona">
+            <p>
+              I operate at the convergence of <strong>software craftsmanship and adversarial defense</strong>.
+              Most developers write code without anticipating threat vectors; most security analysts triage alerts without understanding the underlying backend architecture.
+            </p>
+            <p>
+              My focus is simple: <strong>build applications that attackers cannot easily exploit, and defend systems with the deep perspective of someone who builds platforms from scratch</strong>.
+              Whether building full-stack platforms in <mark>React & Spring Boot</mark>, automating threat pipelines in <mark>Python & Flask</mark>, or analyzing financial fraud cases for the <mark>Tamil Nadu Cyber Crime Wing</mark>,
+              I build code engineered for resilience under pressure.
+            </p>
+          </div>
+
+          <!-- Tab 2: Philosophy -->
+          <div class="about-pane" id="tab-philosophy">
+            <p>
+              <strong>Security is not a plugin added after deployment; it must be compiled into the source.</strong>
+              Defensive security is strongest when engineered proactively at the architectural level — through cryptographic hash verification,
+              strict input normalization, real-time threat feed ingestion, and zero-trust data flows.
+            </p>
+            <p>
+              This mindset extends directly into algorithmic discipline: with <mark>468+ LeetCode problems solved</mark> in Java across
+              dynamic programming, graphs, and trees, I approach every engineering challenge with strict complexity guarantees and clean system architecture.
+            </p>
+          </div>
+
+          <!-- Tab 3: Creed -->
+          <div class="about-pane" id="tab-creed">
+            <p>
+              <strong>Detect early. Automate ruthlessly. Build transparently.</strong>
+            </p>
+            <p>
+              Modern cyber defense cannot survive on manual triage alone. I architect autonomous workflows — from real-time defacement rollback systems
+              in <mark>TamperTrace</mark> to automated YARA rule and firewall enforcement generation in <mark>AssetCentric CTI</mark>.
+              If an operational workflow can be automated to eliminate attacker dwell time, I build the tool to do it.
+            </p>
+          </div>
+
           <div class="lang-row">
             <span class="lang-badge"><i class="fas fa-language"></i> English — Professional</span>
             <span class="lang-badge"><i class="fas fa-language"></i> Tamil — Native</span>
             <span class="lang-badge"><i class="fas fa-language"></i> Hindi — Basic</span>
           </div>
+
+          <div class="about-tags">
+            <div class="tag-item"><i class="fas fa-shield-alt"></i> Threat Intelligence & CTI</div>
+            <div class="tag-item"><i class="fas fa-laptop-code"></i> Full-Stack (React / Spring Boot)</div>
+            <div class="tag-item"><i class="fas fa-code"></i> Security Automation & Python</div>
+            <div class="tag-item"><i class="fas fa-terminal"></i> DSA & LeetCode (468+ Solved)</div>
+            <div class="tag-item"><i class="fas fa-network-wired"></i> Network Forensics (Wireshark)</div>
+            <div class="tag-item"><i class="fas fa-chart-bar"></i> SIEM / Splunk & Log Analysis</div>
+          </div>
         </div>
-        <div class="about-tags">
-          <div class="tag-item"><i class="fas fa-shield-alt"></i> Threat Intelligence</div>
-          <div class="tag-item"><i class="fas fa-search"></i> OSINT Analysis</div>
-          <div class="tag-item"><i class="fas fa-code"></i> Security Automation</div>
-          <div class="tag-item"><i class="fas fa-network-wired"></i> Network Forensics</div>
-          <div class="tag-item"><i class="fas fa-bug"></i> Vulnerability Assessment</div>
-          <div class="tag-item"><i class="fas fa-chart-bar"></i> SIEM / Splunk</div>
+
+        <!-- Dossier Matrix Telemetry Card -->
+        <div class="dossier-card">
+          <div class="scanline"></div>
+          <div class="dossier-header">
+            <span class="dossier-title"><i class="fas fa-id-card-clip"></i> indra.sys // Telemetry Matrix</span>
+            <span class="dossier-status"><span class="tag-dot"></span> Verified</span>
+          </div>
+          <div class="dossier-body">
+            <div class="dossier-row">
+              <span class="dossier-lbl">Identity</span>
+              <span class="dossier-val"><strong>Indra Kumar V</strong></span>
+            </div>
+            <div class="dossier-row">
+              <span class="dossier-lbl">Specialization</span>
+              <span class="dossier-val"><mark>Cybersecurity & Software Engineering</mark></span>
+            </div>
+            <div class="dossier-row">
+              <span class="dossier-lbl">Institution</span>
+              <span class="dossier-val">Dr. N.G.P. Institute of Technology</span>
+            </div>
+            <div class="dossier-row">
+              <span class="dossier-lbl">Degree & GPA</span>
+              <span class="dossier-val">B.E. CS (Cyber Security) '27 · CGPA 7.95</span>
+            </div>
+            <div class="dossier-row">
+              <span class="dossier-lbl">Problem Solving</span>
+              <span class="dossier-val"><strong style="color: #ffc01e;">468+ Solved</strong> (Java DSA, LeetCode)</span>
+            </div>
+            <div class="dossier-row">
+              <span class="dossier-lbl">Govt Operations</span>
+              <span class="dossier-val">Tamil Nadu Cyber Crime Wing (FundTrail Backend)</span>
+            </div>
+            <div class="dossier-row">
+              <span class="dossier-lbl">Labs Standings</span>
+              <span class="dossier-val"><strong style="color: #ff3b4e;">Top 10% Global Rank</strong> (TryHackMe)</span>
+            </div>
+            <div class="dossier-row">
+              <span class="dossier-lbl">Research</span>
+              <span class="dossier-val">IEEE RICE-2025 Published Author</span>
+            </div>
+            <div class="dossier-row">
+              <span class="dossier-lbl">Current Status</span>
+              <span class="dossier-val" style="color: #4ade80;">● Open for Dev & Security Roles</span>
+            </div>
+          </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -118,48 +224,48 @@
         <div class="skill-card">
           <div class="scanline"></div>
           <div class="skill-icon"><i class="fas fa-shield-alt"></i></div>
-          <h3>Cybersecurity</h3>
+          <h3>Cybersecurity & SOC</h3>
           <ul class="skill-list">
             <li>Threat Intelligence & OSINT Analysis</li>
             <li>Vulnerability Assessment (OWASP Top 10)</li>
-            <li>Incident Response Basics</li>
-            <li>Web Application Security</li>
+            <li>SIEM & Log Correlation (Splunk)</li>
+            <li>Network Traffic Forensics (Wireshark)</li>
           </ul>
         </div>
 
         <div class="skill-card">
           <div class="scanline"></div>
-          <div class="skill-icon"><i class="fas fa-network-wired"></i></div>
-          <h3>Networking</h3>
+          <div class="skill-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3>Full-Stack & Backend</h3>
           <ul class="skill-list">
-            <li>TCP/IP, DNS, HTTP/HTTPS</li>
-            <li>OSI Model & Subnetting</li>
-            <li>Network Traffic Analysis (Wireshark)</li>
-            <li>DNS & Email Security (SPF, DKIM, DMARC)</li>
+            <li>Java & Spring Boot Framework</li>
+            <li>React.js & Modern Frontend</li>
+            <li>Python (Flask REST APIs)</li>
+            <li>PostgreSQL & MySQL Databases</li>
+          </ul>
+        </div>
+
+        <div class="skill-card">
+          <div class="scanline"></div>
+          <div class="skill-icon"><i class="fas fa-robot"></i></div>
+          <h3>Security Automation</h3>
+          <ul class="skill-list">
+            <li>Threat Feeds (AbuseIPDB, VirusTotal, ThreatFox)</li>
+            <li>Automated YARA Rule Generation</li>
+            <li>Cryptographic & SSIM Visual Hashing</li>
+            <li>DNS Posture (SPF, DKIM, DMARC, DNSSEC)</li>
           </ul>
         </div>
 
         <div class="skill-card">
           <div class="scanline"></div>
           <div class="skill-icon"><i class="fas fa-terminal"></i></div>
-          <h3>Programming & Backend</h3>
+          <h3>Core CS & Dev Tools</h3>
           <ul class="skill-list">
-            <li>Python — Security Automation</li>
-            <li>Java, SQL, Flask</li>
-            <li>APIs, Threat Feeds Integration</li>
-            <li>MySQL, D3.js Visualizations</li>
-          </ul>
-        </div>
-
-        <div class="skill-card">
-          <div class="scanline"></div>
-          <div class="skill-icon"><i class="fas fa-tools"></i></div>
-          <h3>Tools & Platforms</h3>
-          <ul class="skill-list">
-            <li>Nmap, Wireshark, Burp Suite, OWASP ZAP</li>
-            <li>Metasploit, Splunk (SIEM)</li>
-            <li>Kali Linux, Parrot OS, Windows</li>
-            <li>Git, GitHub, TryHackMe (Top 10%)</li>
+            <li>Data Structures & Algorithms (Java)</li>
+            <li>Git, GitHub Version Control & CI/CD</li>
+            <li>Linux Environments (Kali, Parrot OS)</li>
+            <li>Nmap, Burp Suite, Metasploit, OWASP ZAP</li>
           </ul>
         </div>
 
@@ -167,57 +273,183 @@
     </div>
   </section>
 
-  <!-- LABS -->
+  <!-- LABS & CODE -->
   <section id="labs">
     <div class="container">
-      <div class="section-label">03 / LABS</div>
-      <h2 class="section-title">Security Labs & Practical Training</h2>
-      <div class="labs-card">
-        <div class="labs-left">
-          <div class="labs-brand">
-            <i class="fas fa-user-secret"></i>
-            <div>
-              <h3>TryHackMe</h3>
-              <p>Hands-on Cybersecurity Labs</p>
+      <div class="section-label">03 / LABS & CODE</div>
+      <h2 class="section-title">Practical Labs & Algorithmic Problem Solving</h2>
+      <div class="labs-grid">
+
+        <!-- TRYHACKME CARD -->
+        <div class="lab-card-full">
+          <div class="scanline"></div>
+          <div>
+            <div class="lab-header">
+              <div class="lab-brand">
+                <div class="lab-icon thm-icon"><i class="fas fa-fire"></i></div>
+                <div>
+                  <h3>TryHackMe</h3>
+                  <p>Practical Cyber Defense & Red Team Labs</p>
+                </div>
+              </div>
+              <span class="thm-badge"><i class="fas fa-trophy"></i> Top 10% Global Rank</span>
+            </div>
+
+            <div class="lab-metric-panel">
+              <div class="lab-stat-row">
+                <div class="lab-stat">
+                  <span class="lab-stat-n" style="color: #ff3b4e;">Top 10%</span>
+                  <span class="lab-stat-l">Global Rank</span>
+                </div>
+                <div class="lab-stat-div"></div>
+                <div class="lab-stat">
+                  <span class="lab-stat-n">56+</span>
+                  <span class="lab-stat-l">Rooms Solved</span>
+                </div>
+                <div class="lab-stat-div"></div>
+                <div class="lab-stat">
+                  <span class="lab-stat-n" style="color: #4ade80;">Active</span>
+                  <span class="lab-stat-l">Learning Streak</span>
+                </div>
+              </div>
+
+              <!-- THM Specialized Focus breakdown bar -->
+              <div class="lc-diff-bar">
+                <div class="lc-diff-pill thm-diff-pill soc">
+                  <span class="lc-diff-num">30+</span>
+                  <span class="lc-diff-lbl">SOC & Defense</span>
+                </div>
+                <div class="lc-diff-pill thm-diff-pill web">
+                  <span class="lc-diff-num">15+</span>
+                  <span class="lc-diff-lbl">Web & OWASP</span>
+                </div>
+                <div class="lc-diff-pill thm-diff-pill attack">
+                  <span class="lc-diff-num">11+</span>
+                  <span class="lc-diff-lbl">Offensive / CTF</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lab-features">
+              <div class="lab-feat-item">
+                <i class="fas fa-shield-alt" style="color: #38bdf8;"></i>
+                <div>
+                  <strong>Blue Team & SOC Investigations</strong>
+                  <p>Log analysis, event correlation in Splunk, suspicious activity triage, and incident containment.</p>
+                </div>
+              </div>
+              <div class="lab-feat-item">
+                <i class="fas fa-network-wired" style="color: #e8a030;"></i>
+                <div>
+                  <strong>Network Forensics & Packet Analysis</strong>
+                  <p>Deep-dive packet capture inspection with Wireshark, dissecting TCP streams, DNS queries, and anomalous payloads.</p>
+                </div>
+              </div>
+              <div class="lab-feat-item">
+                <i class="fas fa-crosshairs" style="color: #ff3b4e;"></i>
+                <div>
+                  <strong>Attack Surface & Exploit Defense</strong>
+                  <p>Simulated attack vectors, privilege escalation, web application vulnerabilities, and defense hardening.</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="labs-stat-row">
-            <div class="labs-stat">
-              <span class="ls-num">Top 10%</span>
-              <span class="ls-label">Global Rank</span>
-            </div>
-            <div class="labs-stat">
-              <span class="ls-num">56+</span>
-              <span class="ls-label">Labs Completed</span>
-            </div>
+
+          <div class="lab-actions">
+            <a href="https://tryhackme.com/p/indra02" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: #c1121f; border-color: #c1121f; color: #fff;">
+              <i class="fas fa-external-link-alt"></i> View TryHackMe Profile
+            </a>
+            <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+              <i class="fab fa-github"></i> Security Labs Repos
+            </a>
           </div>
-          <a href="https://tryhackme.com/p/indra02" target="_blank" class="btn-primary">
-            <i class="fas fa-external-link-alt"></i> View Profile
-          </a>
         </div>
-        <div class="labs-right">
-          <div class="labs-item">
-            <i class="fas fa-shield-alt"></i>
-            <div>
-              <strong>Blue Team Operations</strong>
-              <p>Log analysis, threat hunting, and network monitoring in simulated SOC environments</p>
+
+        <!-- LEETCODE CARD -->
+        <div class="lab-card-full">
+          <div class="scanline"></div>
+          <div>
+            <div class="lab-header">
+              <div class="lab-brand">
+                <div class="lab-icon"><i class="fas fa-code"></i></div>
+                <div>
+                  <h3>LeetCode</h3>
+                  <p>Data Structures & Algorithmic Problem Solving</p>
+                </div>
+              </div>
+              <span class="live-badge" title="Live stats connected to LeetCode API"><span class="live-dot"></span> Live Sync</span>
+            </div>
+
+            <div class="lab-metric-panel">
+              <div class="lab-stat-row">
+                <div class="lab-stat">
+                  <span class="lab-stat-n" id="lc-total">468</span>
+                  <span class="lab-stat-l">Total Solved</span>
+                </div>
+                <div class="lab-stat-div"></div>
+                <div class="lab-stat">
+                  <span class="lab-stat-n">Java</span>
+                  <span class="lab-stat-l">Primary Language</span>
+                </div>
+                <div class="lab-stat-div"></div>
+                <div class="lab-stat">
+                  <span class="lab-stat-n" id="lc-rank">Top 6%</span>
+                  <span class="lab-stat-l">Global Ranking</span>
+                </div>
+              </div>
+
+              <!-- Difficulty Breakdown -->
+              <div class="lc-diff-bar">
+                <div class="lc-diff-pill easy">
+                  <span class="lc-diff-num" id="lc-easy">162</span>
+                  <span class="lc-diff-lbl">Easy</span>
+                </div>
+                <div class="lc-diff-pill medium">
+                  <span class="lc-diff-num" id="lc-medium">231</span>
+                  <span class="lc-diff-lbl">Medium</span>
+                </div>
+                <div class="lc-diff-pill hard">
+                  <span class="lc-diff-num" id="lc-hard">75</span>
+                  <span class="lc-diff-lbl">Hard</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="lab-features">
+              <div class="lab-feat-item">
+                <i class="fas fa-sitemap"></i>
+                <div>
+                  <strong>Core Data Structures (Java)</strong>
+                  <p>Extensive practice across Trees, Graphs, Heaps, Hash Tables, Queues, and Dynamic Matrices.</p>
+                </div>
+              </div>
+              <div class="lab-feat-item">
+                <i class="fas fa-bolt"></i>
+                <div>
+                  <strong>Algorithmic Patterns</strong>
+                  <p>Dynamic Programming, Two Pointers, Binary Search, Sliding Window, and Backtracking algorithms.</p>
+                </div>
+              </div>
+              <div class="lab-feat-item">
+                <i class="fas fa-tachometer-alt"></i>
+                <div>
+                  <strong>Complexity Optimization</strong>
+                  <p>Rigorous time & space complexity reduction (O(N) & O(log N)), memory efficiency, and clean code.</p>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="labs-item">
-            <i class="fas fa-globe"></i>
-            <div>
-              <strong>Network & Web Security</strong>
-              <p>56+ labs covering network security, web vulnerabilities, and threat detection</p>
-            </div>
-          </div>
-          <div class="labs-item">
-            <i class="fas fa-crosshairs"></i>
-            <div>
-              <strong>Offensive Security</strong>
-              <p>Reconnaissance, vulnerability exploitation, and incident analysis in simulated attack environments</p>
-            </div>
+
+          <div class="lab-actions">
+            <a href="https://leetcode.com/u/Indrakumar_V/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+              <i class="fas fa-external-link-alt"></i> View LeetCode Profile
+            </a>
+            <a href="https://github.com/Indraik/Leetcode" target="_blank" rel="noopener noreferrer" class="btn-ghost">
+              <i class="fab fa-github"></i> Java Solutions Repo
+            </a>
           </div>
         </div>
+
       </div>
     </div>
   </section>
@@ -290,89 +522,122 @@
     <div class="container">
       <div class="section-label">05 / PROJECTS</div>
       <h2 class="section-title">Selected Work</h2>
+
+      <!-- Project Category Filters -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All <span class="filter-count">6</span></button>
+        <button class="filter-btn" data-filter="security">Cybersecurity & CTI <span class="filter-count">4</span></button>
+        <button class="filter-btn" data-filter="software">Full-Stack & Web <span class="filter-count">3</span></button>
+        <button class="filter-btn" data-filter="automation">Security Automation <span class="filter-count">3</span></button>
+      </div>
+
       <div class="projects-grid">
 
-        <div class="proj-card featured">
-          <div class="scanline"></div>
-          <div class="proj-top">
-            <div class="proj-icon"><i class="fas fa-crosshairs"></i></div>
-            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
-          </div>
-          <h3>Asset-Centric Threat Intelligence</h3>
-          <p class="proj-sub">Threat Intelligence Automation Tool</p>
-          <p class="proj-desc">Python-based platform analyzing security indicators across domains, IPs, and URLs. Integrated OSINT threat feeds and reputation databases to detect IOCs. Implemented DNS intelligence analysis, IP reputation scoring, and port exposure monitoring. Flask dashboard for visualization and automated reports.</p>
-          <div class="proj-stack">
-            <span>Python</span><span>Flask</span><span>OSINT</span><span>Threat Feeds</span><span>IOC Detection</span>
-          </div>
-        </div>
-
-        <div class="proj-card featured">
-          <div class="scanline"></div>
-          <div class="proj-top">
-            <div class="proj-icon"><i class="fas fa-globe"></i></div>
-            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
-          </div>
-          <h3>Domain Security Analysis</h3>
-          <p class="proj-sub">DNS Security Posture Assessment</p>
-          <p class="proj-desc">Flask-based tool to analyze domain security through DNS configuration. Automated detection of MX, SPF, DKIM, DMARC records and DNSSEC validation. HTTPS verification and port scanning to identify exposed services. Generates security assessment reports with risk scoring. <span class="proj-award"><i class="fas fa-star"></i> Best Project Award</span></p>
-          <div class="proj-stack">
-            <span>Flask</span><span>DNS</span><span>DMARC/SPF/DKIM</span><span>Risk Scoring</span>
-          </div>
-        </div>
-
-        <div class="proj-card">
+        <!-- 1. TamperTrace Platform -->
+        <div class="proj-card featured" data-category="security automation">
           <div class="scanline"></div>
           <div class="proj-top">
             <div class="proj-icon"><i class="fas fa-shield-virus"></i></div>
-            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="tampertrace" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
+              <a href="https://github.com/Indraik/TamperTrace_Platform" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
+            </div>
           </div>
-          <h3>TamperTrace</h3>
-          <p class="proj-sub">Web Integrity Monitoring System</p>
-          <p class="proj-desc">Detects unauthorized website modifications using cryptographic hash verification. Automated monitoring with scheduled scans and real-time tamper alerts. Flask dashboard with automated website backup and restoration.</p>
+          <h3>TamperTrace Platform</h3>
+          <p class="proj-sub">Web Integrity & Automated Defacement Detection</p>
+          <p class="proj-desc">Automated platform detecting website tampering and unauthorized modifications using SSIM visual diffing, semantic HTML analysis, and VirusTotal API v3. Features automated baseline backups, admin instant alerts, and one-click rollback restoration.</p>
           <div class="proj-stack">
-            <span>Python</span><span>SHA Hashing</span><span>Flask</span><span>MySQL</span>
+            <span>Python</span><span>Flask</span><span>SSIM Hashing</span><span>VirusTotal v3</span><span>Automated Recovery</span>
           </div>
         </div>
 
-        <div class="proj-card">
+        <!-- 2. Asset-Centric CTI Platform -->
+        <div class="proj-card featured" data-category="security automation">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-crosshairs"></i></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="assetcentric" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
+              <a href="https://github.com/Indraik/AssetCentric-CTI-Automation" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Asset-Centric Threat Intelligence</h3>
+          <p class="proj-sub">Threat Intelligence Automation & CTI Platform</p>
+          <p class="proj-desc">Platform analyzing security indicators across domains, IPs, and URLs. Ingests real-time OSINT feeds (AbuseIPDB, URLhaus, ThreatFox) via concurrent worker threads. Correlates ingested logs against normalized IOCs and auto-generates firewall blocklists & YARA rules.</p>
+          <div class="proj-stack">
+            <span>Python</span><span>Flask</span><span>AbuseIPDB</span><span>ThreatFox</span><span>YARA Rules</span><span>IOC Correlation</span>
+          </div>
+        </div>
+
+        <!-- 3. CyberQuiz Platform -->
+        <div class="proj-card" data-category="software security">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="cyberquiz" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
+              <a href="https://github.com/Indraik/Cyber-Quiz" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>CyberQuiz Platform</h3>
+          <p class="proj-sub">Full-Stack Cybersecurity Quiz & Assessment Platform</p>
+          <p class="proj-desc">Interactive full-stack web application built with React, Spring Boot, and PostgreSQL. Features real-time timed challenge sessions, live leaderboards, score tracking, RESTful APIs, and an admin question management portal.</p>
+          <div class="proj-stack">
+            <span>React.js</span><span>Spring Boot</span><span>Java</span><span>PostgreSQL</span><span>REST APIs</span>
+          </div>
+        </div>
+
+        <!-- 4. Domain Security Scanner -->
+        <div class="proj-card" data-category="security automation">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-globe"></i></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="domainscanner" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
+              <a href="https://github.com/Indraik/Domain_Security_Scanner" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
+            </div>
+          </div>
+          <h3>Domain Security Scanner</h3>
+          <p class="proj-sub">DNS Security Posture Assessment & Vulnerability Audit</p>
+          <p class="proj-desc">Automated security audit tool evaluating domain posture through DNS configuration (MX, SPF, DKIM, DMARC, DNSSEC). Features high-speed concurrent socket port scanning, SSL/TLS header verification, and downloadable PDF risk reports. <span class="proj-award"><i class="fas fa-star"></i> Best Project Award</span></p>
+          <div class="proj-stack">
+            <span>Flask</span><span>DNSSEC</span><span>DMARC/SPF/DKIM</span><span>Port Scanner</span><span>PDF Reporting</span>
+          </div>
+        </div>
+
+        <!-- 5. FundTrail Analysis Tool -->
+        <div class="proj-card" data-category="software security">
           <div class="scanline"></div>
           <div class="proj-top">
             <div class="proj-icon"><i class="fas fa-scale-balanced"></i></div>
-            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="fundtrail" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
+              <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer" title="GitHub Profile (Internal Govt Tool)"><i class="fab fa-github"></i></a>
+            </div>
           </div>
-          <h3>FundTrail</h3>
-          <p class="proj-sub">Financial Transaction Analysis Tool</p>
-          <p class="proj-desc">Web-based investigation platform to analyze financial transaction trails. Automated Excel parsing and transaction normalization using Python. MySQL-backed dashboards and D3.js visualizations for tracing suspicious fund movements.</p>
+          <h3>FundTrail Analysis Tool</h3>
+          <p class="proj-sub">Financial Transaction Forensics & Fund-Flow Visualization</p>
+          <p class="proj-desc">Engineered for the Tamil Nadu Cyber Crime Wing to manage and investigate financial fraud cases across 5+ active cases. Built Python Excel normalizers, MySQL transaction database, and D3.js interactive fund-flow graph visualizations. <span class="proj-award"><i class="fas fa-landmark"></i> Tamil Nadu Cyber Crime Wing System</span></p>
           <div class="proj-stack">
-            <span>Flask</span><span>MySQL</span><span>D3.js</span><span>Python</span>
+            <span>Flask</span><span>MySQL</span><span>D3.js</span><span>Python</span><span>Financial Forensics</span>
           </div>
         </div>
 
-        <div class="proj-card">
+        <!-- 6. Task Master Pro -->
+        <div class="proj-card" data-category="software">
           <div class="scanline"></div>
           <div class="proj-top">
-            <div class="proj-icon"><i class="fas fa-network-wired"></i></div>
-            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
+            <div class="proj-icon"><i class="fas fa-tasks"></i></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="taskmaster" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
+              <a href="https://github.com/Indraik/Task_Master_Pro" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
+            </div>
           </div>
-          <h3>PortGuardian</h3>
-          <p class="proj-sub">Port Watch & Alert Automation</p>
-          <p class="proj-desc">Detects unauthorized port changes, logs port states, and generates real-time security alerts for proactive network monitoring.</p>
+          <h3>Task Master Pro</h3>
+          <p class="proj-sub">Full-Stack Task & Workflow Management Platform</p>
+          <p class="proj-desc">Full-stack productivity web application engineered with a clean, responsive interface, reactive state management, categorized priority filtering, and optimized backend CRUD endpoints.</p>
           <div class="proj-stack">
-            <span>Python</span><span>Monitoring</span><span>Alerting</span>
-          </div>
-        </div>
-
-        <div class="proj-card">
-          <div class="scanline"></div>
-          <div class="proj-top">
-            <div class="proj-icon"><i class="fas fa-search"></i></div>
-            <div class="proj-links"><a href="#" title="GitHub"><i class="fab fa-github"></i></a></div>
-          </div>
-          <h3>DNS Record Finder</h3>
-          <p class="proj-sub">Bug Bounty Reconnaissance</p>
-          <p class="proj-desc">Collects and analyzes DNS records (MX, DMARC, TXT, CNAME) to support security reconnaissance in bug bounty workflows. <span class="proj-award"><i class="fas fa-star"></i> Best Mini Project Award</span></p>
-          <div class="proj-stack">
-            <span>Python</span><span>DNS</span><span>Bug Bounty</span>
+            <span>React.js</span><span>Node.js</span><span>Express</span><span>REST APIs</span><span>State Management</span>
           </div>
         </div>
 
@@ -437,22 +702,28 @@
       <div class="contact-grid">
         <div class="contact-left">
           <p class="contact-intro">
-            Seeking a <strong>Cybersecurity or SOC Analyst</strong> role to strengthen
-            real-world detection and incident response capabilities. Feel free to reach out.
+            Seeking a <strong>Cybersecurity Engineer, SOC Analyst, or Software Developer</strong> role to build
+            high-impact platforms and strengthen threat detection and incident response capabilities. Feel free to reach out.
           </p>
           <div class="contact-detail">
             <i class="fas fa-envelope"></i>
-            <div>
+            <div class="cd-info">
               <span class="cd-label">Email</span>
               <a href="mailto:indrakumarvelusamy@gmail.com">indrakumarvelusamy@gmail.com</a>
             </div>
+            <button type="button" class="copy-btn" data-copy="indrakumarvelusamy@gmail.com" title="Copy Email to Clipboard" aria-label="Copy email to clipboard">
+              <i class="fas fa-copy"></i>
+            </button>
           </div>
           <div class="contact-detail">
             <i class="fas fa-phone"></i>
-            <div>
+            <div class="cd-info">
               <span class="cd-label">Phone</span>
               <a href="tel:+919965716838">+91 99657 16838</a>
             </div>
+            <button type="button" class="copy-btn" data-copy="+919965716838" title="Copy Phone to Clipboard" aria-label="Copy phone number to clipboard">
+              <i class="fas fa-copy"></i>
+            </button>
           </div>
           <div class="contact-detail">
             <i class="fas fa-location-dot"></i>
@@ -462,9 +733,10 @@
             </div>
           </div>
           <div class="social-row">
-            <a href="https://www.linkedin.com/in/indra0210/" target="_blank" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/Indraik" target="_blank" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://tryhackme.com/p/indra02" target="_blank" class="social-btn"><i class="fas fa-user-secret"></i> TryHackMe</a>
+            <a href="https://www.linkedin.com/in/indra0210/" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://leetcode.com/u/Indrakumar_V/" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fas fa-code"></i> LeetCode</a>
+            <a href="https://tryhackme.com/p/indra02" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fas fa-user-secret"></i> TryHackMe</a>
           </div>
         </div>
 
@@ -498,32 +770,74 @@
       <span class="footer-brand"><span class="brand-bracket">[</span>IK<span class="brand-bracket">]</span> Indra Kumar V</span>
       <span class="footer-copy">© 2026 · Designed & Built by Indra</span>
       <div class="footer-links">
-        <a href="https://github.com/Indraik" target="_blank"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/indra0210/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://tryhackme.com/p/indra02" target="_blank"><i class="fas fa-user-secret"></i></a>
+        <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/indra0210/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://leetcode.com/u/Indrakumar_V/" target="_blank" rel="noopener noreferrer" title="LeetCode"><i class="fas fa-code"></i></a>
+        <a href="https://tryhackme.com/p/indra02" target="_blank" rel="noopener noreferrer" title="TryHackMe"><i class="fas fa-user-secret"></i></a>
       </div>
     </div>
   </footer>
+
+  <!-- COMMAND PALETTE MODAL (Ctrl+K) -->
+  <div id="cmdPaletteModal" class="cmd-modal-backdrop" aria-hidden="true">
+    <div class="cmd-modal-box">
+      <div class="cmd-search-bar">
+        <i class="fas fa-terminal cmd-search-icon"></i>
+        <input type="text" id="cmdInput" class="cmd-input" placeholder="Search commands, projects, skills (e.g. 'TamperTrace', 'CV', 'Copy Email')..." autocomplete="off" />
+        <span class="cmd-badge">ESC</span>
+      </div>
+      <div class="cmd-results" id="cmdResults"></div>
+      <div class="cmd-footer">
+        <span><kbd>↑</kbd> <kbd>↓</kbd> navigate</span>
+        <span><kbd>↵</kbd> select</span>
+        <span><kbd>ESC</kbd> close</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- SYSTEM ARCHITECTURE MODAL -->
+  <div id="archModal" class="arch-modal-backdrop" aria-hidden="true">
+    <div class="arch-modal-box">
+      <div class="arch-modal-header">
+        <div class="arch-title-group">
+          <span class="arch-badge"><i class="fas fa-microchip"></i> System Architecture & Pipeline</span>
+          <h3 id="archModalTitle">System Architecture</h3>
+        </div>
+        <button type="button" class="arch-close-btn" id="closeArchModal" aria-label="Close architecture modal"><i class="fas fa-times"></i></button>
+      </div>
+      <div class="arch-modal-body" id="archModalBody"></div>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toast" class="toast" aria-live="polite">
+    <i class="fas fa-check-circle toast-icon"></i>
+    <span id="toastMsg">Copied to clipboard!</span>
+  </div>
 
   <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
     <i class="fas fa-arrow-up"></i>
   </button>
 
   <script>
-    document.querySelectorAll('.skill-card, .proj-card, .ach-card, .tl-card').forEach(card => {
-      card.addEventListener('mousemove', (e) => {
-        const r  = card.getBoundingClientRect();
-        const rx = ((e.clientY - r.top  - r.height/2) / (r.height/2)) * -6;
-        const ry = ((e.clientX - r.left - r.width /2) / (r.width /2)) *  6;
-        card.style.setProperty('--rx', rx.toFixed(2) + 'deg');
-        card.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+    // 3D Card Tilt Effect (Only on devices with fine pointer / hover support)
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      document.querySelectorAll('.skill-card, .proj-card, .ach-card, .tl-card, .lab-card-full').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const r  = card.getBoundingClientRect();
+          const rx = ((e.clientY - r.top  - r.height/2) / (r.height/2)) * -6;
+          const ry = ((e.clientX - r.left - r.width /2) / (r.width /2)) *  6;
+          card.style.setProperty('--rx', rx.toFixed(2) + 'deg');
+          card.style.setProperty('--ry', ry.toFixed(2) + 'deg');
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.setProperty('--rx', '0deg');
+          card.style.setProperty('--ry', '0deg');
+        });
       });
-      card.addEventListener('mouseleave', () => {
-        card.style.setProperty('--rx', '0deg');
-        card.style.setProperty('--ry', '0deg');
-      });
-    });
+    }
 
+    // Mobile Hamburger Toggle
     const hamburger = document.getElementById('hamburger');
     const navLinks  = document.getElementById('nav-links');
     hamburger.addEventListener('click', () => {
@@ -537,20 +851,131 @@
       });
     });
 
+    // Navbar Scrolled Effect & Scroll Spy
     const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 60));
+    const sections = document.querySelectorAll('section[id]');
+    const navItems = document.querySelectorAll('.nav-links a[href^="#"]');
 
+    function updateNavScroll() {
+      const scrollY = window.scrollY;
+      navbar.classList.toggle('scrolled', scrollY > 60);
+
+      // Scroll Spy
+      let currentId = '';
+      sections.forEach(sec => {
+        const top = sec.offsetTop - 120;
+        const height = sec.offsetHeight;
+        if (scrollY >= top && scrollY < top + height) {
+          currentId = sec.getAttribute('id');
+        }
+      });
+      navItems.forEach(item => {
+        const href = item.getAttribute('href').substring(1);
+        if (href === currentId) {
+          item.classList.add('active');
+        } else {
+          item.classList.remove('active');
+        }
+      });
+    }
+    window.addEventListener('scroll', updateNavScroll);
+    updateNavScroll();
+
+    // Scroll to Top Button
     const scrollBtn = document.getElementById('scrollTop');
     window.addEventListener('scroll', () => scrollBtn.classList.toggle('visible', window.scrollY > 500));
     scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
+    // Scroll Reveal Animation
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); } });
     }, { threshold: 0.1 });
-    document.querySelectorAll('.skill-card, .proj-card, .tl-item, .ach-card, .labs-card').forEach(el => {
+    document.querySelectorAll('.skill-card, .proj-card, .tl-item, .ach-card, .lab-card-full').forEach(el => {
       el.classList.add('reveal'); observer.observe(el);
     });
 
+    // Project Category Filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.proj-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.getAttribute('data-filter');
+        projectCards.forEach(card => {
+          const category = card.getAttribute('data-category') || '';
+          if (filter === 'all' || category.includes(filter)) {
+            card.classList.remove('filtered-out');
+          } else {
+            card.classList.add('filtered-out');
+          }
+        });
+      });
+    });
+
+    // About Section Tabs
+    const aboutTabs = document.querySelectorAll('.about-tab-btn');
+    const aboutPanes = document.querySelectorAll('.about-pane');
+    aboutTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
+        aboutTabs.forEach(t => t.classList.remove('active'));
+        aboutPanes.forEach(p => p.classList.remove('active'));
+        tab.classList.add('active');
+        const activePane = document.getElementById('tab-' + target);
+        if (activePane) activePane.classList.add('active');
+      });
+    });
+
+    // Close mobile menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (navbar && !navbar.contains(e.target) && navLinks && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        hamburger.classList.remove('active');
+      }
+    });
+
+    // Real-Time LeetCode Stats Fetcher
+    async function fetchLeetCodeStats() {
+      const username = 'Indrakumar_V';
+      try {
+        const res = await fetch(`https://leetcode-api-faisalshohag.vercel.app/${username}`);
+        if (!res.ok) throw new Error('API status not ok');
+        const data = await res.parse ? await res.parse() : await res.json();
+        
+        if (data && typeof data.totalSolved === 'number') {
+          const total = data.totalSolved;
+          const easy = data.easySolved ?? 162;
+          const medium = data.mediumSolved ?? 231;
+          const hard = data.hardSolved ?? 75;
+
+          const totalEl = document.getElementById('lc-total');
+          const easyEl = document.getElementById('lc-easy');
+          const mediumEl = document.getElementById('lc-medium');
+          const hardEl = document.getElementById('lc-hard');
+          const heroCount = document.getElementById('hero-lc-count');
+          const heroStat = document.getElementById('hero-lc-stat');
+          const rankEl = document.getElementById('lc-rank');
+
+          if (totalEl) totalEl.textContent = total;
+          if (easyEl) easyEl.textContent = easy;
+          if (mediumEl) mediumEl.textContent = medium;
+          if (hardEl) hardEl.textContent = hard;
+          if (heroCount) heroCount.textContent = total;
+          if (heroStat) heroStat.textContent = total + '+';
+          if (rankEl && data.ranking) {
+            rankEl.textContent = '#' + Number(data.ranking).toLocaleString();
+          }
+        }
+      } catch (err) {
+        console.log('LeetCode stats using cached fallback', err);
+      }
+    }
+    fetchLeetCodeStats();
+
+    // Contact Form Submission
     const form = document.getElementById('contact-form');
     const status = document.getElementById('form-status');
     form.addEventListener('submit', async (e) => {
@@ -563,6 +988,471 @@
         else throw new Error();
       } catch { status.textContent = '✗ Something went wrong. Please try again.'; status.className = 'form-status error'; }
       btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Message'; btn.disabled = false;
+    });
+
+    // Dynamic Hero Typewriter Effect
+    const typewriterEl = document.getElementById('hero-typewriter');
+    if (typewriterEl) {
+      const phrases = [
+        "Open to Software Development roles & Security Engineering",
+        "Building Resilient Full-Stack Systems · Java & React",
+        "Open to Software Development roles & Security Engineering",
+        "Automating Threat Intelligence & Security Pipelines"
+      ];
+      let phraseIdx = 0;
+      let charIdx = phrases[0].length;
+      let isDeleting = true; // start by pausing on initial rendered phrase then backspacing or typing
+      let typeSpeed = 3000;
+
+      function typeLoop() {
+        const current = phrases[phraseIdx];
+        if (isDeleting) {
+          typewriterEl.textContent = current.substring(0, charIdx - 1);
+          charIdx--;
+          typeSpeed = 22;
+        } else {
+          typewriterEl.textContent = current.substring(0, charIdx + 1);
+          charIdx++;
+          typeSpeed = 45;
+        }
+
+        if (!isDeleting && charIdx === current.length) {
+          typeSpeed = 3500; // Hold full phrase for 3.5 seconds
+          isDeleting = true;
+        } else if (isDeleting && charIdx === 0) {
+          isDeleting = false;
+          phraseIdx = (phraseIdx + 1) % phrases.length;
+          typeSpeed = 400; // Brief pause before typing next
+        }
+
+        setTimeout(typeLoop, typeSpeed);
+      }
+      setTimeout(typeLoop, 2500);
+    }
+
+    // ── FEATURE 1: INTERACTIVE THREAT MESH / PACKET CANVAS ──
+    (function initHeroCanvas() {
+      const canvas = document.getElementById('heroCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let width, height;
+      let particles = [];
+      let mouse = { x: null, y: null, maxDist: 140 };
+
+      function resize() {
+        width = canvas.width = canvas.parentElement.offsetWidth;
+        height = canvas.height = canvas.parentElement.offsetHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      const particleCount = Math.min(45, Math.floor((width * height) / 18000));
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6,
+          radius: Math.random() * 1.8 + 1.2,
+          isCyan: Math.random() > 0.75
+        });
+      }
+
+      const heroSection = document.querySelector('.hero');
+      if (heroSection) {
+        heroSection.addEventListener('mousemove', (e) => {
+          const rect = heroSection.getBoundingClientRect();
+          mouse.x = e.clientX - rect.left;
+          mouse.y = e.clientY - rect.top;
+        });
+        heroSection.addEventListener('mouseleave', () => {
+          mouse.x = null;
+          mouse.y = null;
+        });
+      }
+
+      let isVisible = true;
+      const canvasObserver = new IntersectionObserver((entries) => {
+        isVisible = entries[0].isIntersecting;
+      }, { threshold: 0.05 });
+      canvasObserver.observe(canvas);
+
+      function animate() {
+        if (!isVisible) {
+          requestAnimationFrame(animate);
+          return;
+        }
+        ctx.clearRect(0, 0, width, height);
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0 || p.x > width) p.vx *= -1;
+          if (p.y < 0 || p.y > height) p.vy *= -1;
+
+          // Mouse gravity interaction
+          if (mouse.x !== null && mouse.y !== null) {
+            const dx = mouse.x - p.x;
+            const dy = mouse.y - p.y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < mouse.maxDist) {
+              const force = (mouse.maxDist - dist) / mouse.maxDist;
+              p.x += (dx / dist) * force * 0.8;
+              p.y += (dy / dist) * force * 0.8;
+
+              ctx.strokeStyle = `rgba(232, 160, 48, ${(1 - dist / mouse.maxDist) * 0.28})`;
+              ctx.lineWidth = 0.8;
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(mouse.x, mouse.y);
+              ctx.stroke();
+            }
+          }
+
+          ctx.fillStyle = p.isCyan ? 'rgba(56, 189, 248, 0.75)' : 'rgba(232, 160, 48, 0.75)';
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fill();
+
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+            if (dist < 110) {
+              const alpha = (1 - dist / 110) * 0.16;
+              ctx.strokeStyle = p.isCyan ? `rgba(56, 189, 248, ${alpha})` : `rgba(232, 160, 48, ${alpha})`;
+              ctx.lineWidth = 0.6;
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+
+    // ── FEATURE 2: 1-CLICK COPY TOAST SYSTEM ──
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+    let toastTimeout;
+
+    function showToast(message) {
+      if (!toast) return;
+      if (toastMsg) toastMsg.textContent = message;
+      toast.classList.add('visible');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('visible');
+      }, 2600);
+    }
+
+    document.querySelectorAll('.copy-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const textToCopy = btn.getAttribute('data-copy');
+        if (textToCopy) {
+          navigator.clipboard.writeText(textToCopy).then(() => {
+            showToast(`✓ Copied "${textToCopy}" to clipboard!`);
+          }).catch(() => {
+            const ta = document.createElement('textarea');
+            ta.value = textToCopy;
+            document.body.appendChild(ta);
+            ta.select();
+            document.execCommand('copy');
+            document.body.removeChild(ta);
+            showToast(`✓ Copied "${textToCopy}" to clipboard!`);
+          });
+        }
+      });
+    });
+
+    // ── FEATURE 3: RECRUITER COMMAND PALETTE (Ctrl+K) ──
+    const cmdModal = document.getElementById('cmdPaletteModal');
+    const cmdInput = document.getElementById('cmdInput');
+    const cmdResults = document.getElementById('cmdResults');
+    const openPaletteBtn = document.getElementById('openPalette');
+
+    const paletteActions = [
+      { id: 'resume', title: 'Download Resume / CV (PDF)', category: 'Direct Action', icon: 'fa-file-pdf', action: () => window.open('docs/IndraKumar_CV.pdf', '_blank') },
+      { id: 'copy-email', title: 'Copy Email (indrakumarvelusamy@gmail.com)', category: 'Direct Action', icon: 'fa-envelope', action: () => { navigator.clipboard.writeText('indrakumarvelusamy@gmail.com'); showToast('✓ Email copied to clipboard!'); } },
+      { id: 'copy-phone', title: 'Copy Phone (+91 99657 16838)', category: 'Direct Action', icon: 'fa-phone', action: () => { navigator.clipboard.writeText('+919965716838'); showToast('✓ Phone number copied!'); } },
+      { id: 'open-lc', title: 'Open LeetCode Profile (468+ Solved in Java)', category: 'Profiles & Labs', icon: 'fa-code', action: () => window.open('https://leetcode.com/u/Indrakumar_V/', '_blank') },
+      { id: 'open-thm', title: 'Open TryHackMe (Top 10% Global Rank)', category: 'Profiles & Labs', icon: 'fa-user-secret', action: () => window.open('https://tryhackme.com/p/indra02', '_blank') },
+      { id: 'open-gh', title: 'Open GitHub Repositories (Indraik)', category: 'Profiles & Labs', icon: 'fa-github', action: () => window.open('https://github.com/Indraik', '_blank') },
+      { id: 'proj-tamper', title: 'TamperTrace Platform (Defacement Detection & Rollback)', category: 'Flagship Projects', icon: 'fa-shield-virus', action: () => openArchModal('tampertrace') },
+      { id: 'proj-cti', title: 'Asset-Centric Threat Intelligence Platform', category: 'Flagship Projects', icon: 'fa-crosshairs', action: () => openArchModal('assetcentric') },
+      { id: 'proj-quiz', title: 'CyberQuiz Full-Stack Web Platform (React + Spring Boot)', category: 'Flagship Projects', icon: 'fa-graduation-cap', action: () => openArchModal('cyberquiz') },
+      { id: 'proj-domain', title: 'Domain Security Scanner (Best Project Award)', category: 'Flagship Projects', icon: 'fa-globe', action: () => openArchModal('domainscanner') },
+      { id: 'proj-fund', title: 'FundTrail Forensics Tool (TN Cyber Crime Wing)', category: 'Flagship Projects', icon: 'fa-scale-balanced', action: () => openArchModal('fundtrail') },
+      { id: 'proj-task', title: 'Task Master Pro (React + Node.js)', category: 'Flagship Projects', icon: 'fa-tasks', action: () => openArchModal('taskmaster') },
+      { id: 'nav-about', title: 'Jump to: About Me & Engineering Thesis', category: 'Navigation', icon: 'fa-user-astronaut', action: () => scrollToId('about') },
+      { id: 'nav-skills', title: 'Jump to: Technical Skills Arsenal', category: 'Navigation', icon: 'fa-laptop-code', action: () => scrollToId('skills') },
+      { id: 'nav-labs', title: 'Jump to: Security Labs & LeetCode Coding', category: 'Navigation', icon: 'fa-flask', action: () => scrollToId('labs') },
+      { id: 'nav-exp', title: 'Jump to: Work Experience & Internships', category: 'Navigation', icon: 'fa-briefcase', action: () => scrollToId('experience') },
+      { id: 'nav-projects', title: 'Jump to: Selected Projects', category: 'Navigation', icon: 'fa-folder-open', action: () => scrollToId('projects') },
+      { id: 'nav-ach', title: 'Jump to: Certifications & IEEE Awards', category: 'Navigation', icon: 'fa-award', action: () => scrollToId('achievements') },
+      { id: 'nav-contact', title: 'Jump to: Contact Form & Channels', category: 'Navigation', icon: 'fa-paper-plane', action: () => scrollToId('contact') }
+    ];
+
+    let selectedIdx = 0;
+    let filteredActions = [...paletteActions];
+
+    function openPalette() {
+      if (!cmdModal) return;
+      cmdModal.classList.add('open');
+      cmdModal.setAttribute('aria-hidden', 'false');
+      if (cmdInput) {
+        cmdInput.value = '';
+        cmdInput.focus();
+      }
+      renderPaletteResults('');
+    }
+
+    function closePalette() {
+      if (!cmdModal) return;
+      cmdModal.classList.remove('open');
+      cmdModal.setAttribute('aria-hidden', 'true');
+    }
+
+    function scrollToId(id) {
+      const el = document.getElementById(id);
+      if (el) {
+        closePalette();
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function renderPaletteResults(query) {
+      const q = query.toLowerCase().trim();
+      filteredActions = paletteActions.filter(item => 
+        item.title.toLowerCase().includes(q) || 
+        item.category.toLowerCase().includes(q) ||
+        item.id.toLowerCase().includes(q)
+      );
+
+      selectedIdx = 0;
+      if (!cmdResults) return;
+
+      if (filteredActions.length === 0) {
+        cmdResults.innerHTML = `<div class="cmd-empty">No matching actions found for "<strong>${escapeHTML(query)}</strong>"</div>`;
+        return;
+      }
+
+      cmdResults.innerHTML = filteredActions.map((item, idx) => `
+        <div class="cmd-item ${idx === 0 ? 'selected' : ''}" data-idx="${idx}">
+          <div class="cmd-item-left">
+            <i class="fas ${item.icon} cmd-item-icon"></i>
+            <span class="cmd-item-title">${item.title}</span>
+          </div>
+          <span class="cmd-item-cat">${item.category}</span>
+        </div>
+      `).join('');
+
+      cmdResults.querySelectorAll('.cmd-item').forEach(el => {
+        el.addEventListener('click', () => {
+          const idx = parseInt(el.getAttribute('data-idx'), 10);
+          if (filteredActions[idx]) {
+            closePalette();
+            filteredActions[idx].action();
+          }
+        });
+      });
+    }
+
+    if (openPaletteBtn) openPaletteBtn.addEventListener('click', openPalette);
+
+    window.addEventListener('keydown', (e) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') {
+        e.preventDefault();
+        if (cmdModal && cmdModal.classList.contains('open')) closePalette();
+        else openPalette();
+      } else if (e.key === 'Escape') {
+        closePalette();
+        closeArchModalFunc();
+      } else if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
+        e.preventDefault();
+        openPalette();
+      }
+
+      if (cmdModal && cmdModal.classList.contains('open')) {
+        const items = cmdResults.querySelectorAll('.cmd-item');
+        if (e.key === 'ArrowDown') {
+          e.preventDefault();
+          selectedIdx = (selectedIdx + 1) % filteredActions.length;
+          updateSelectedCmdItem(items);
+        } else if (e.key === 'ArrowUp') {
+          e.preventDefault();
+          selectedIdx = (selectedIdx - 1 + filteredActions.length) % filteredActions.length;
+          updateSelectedCmdItem(items);
+        } else if (e.key === 'Enter') {
+          e.preventDefault();
+          if (filteredActions[selectedIdx]) {
+            closePalette();
+            filteredActions[selectedIdx].action();
+          }
+        }
+      }
+    });
+
+    function updateSelectedCmdItem(items) {
+      items.forEach((it, i) => it.classList.toggle('selected', i === selectedIdx));
+      if (items[selectedIdx]) items[selectedIdx].scrollIntoView({ block: 'nearest' });
+    }
+
+    if (cmdInput) {
+      cmdInput.addEventListener('input', (e) => {
+        renderPaletteResults(e.target.value);
+      });
+    }
+
+    if (cmdModal) {
+      cmdModal.addEventListener('click', (e) => {
+        if (e.target === cmdModal) closePalette();
+      });
+    }
+
+    // ── FEATURE 4: INTERACTIVE SYSTEM ARCHITECTURE MODAL ──
+    const archModal = document.getElementById('archModal');
+    const archModalTitle = document.getElementById('archModalTitle');
+    const archModalBody = document.getElementById('archModalBody');
+    const closeArchModalBtn = document.getElementById('closeArchModal');
+
+    const projectArchitectures = {
+      'tampertrace': {
+        title: 'TamperTrace Platform',
+        tagline: 'Automated Web Integrity & Defacement Detection Pipeline',
+        stack: ['Python', 'Flask', 'SSIM Hashing', 'VirusTotal v3 API', 'Automated Rollback Engine'],
+        stages: [
+          { num: '01', title: 'Target Crawler & DOM Extraction', desc: 'Automated crawler queries web assets at configurable cron intervals, downloads HTML AST structures, and computes baseline cryptographic SHA-256 hashes of critical script assets.' },
+          { num: '02', title: 'SSIM Visual Diffing Engine', desc: 'Captures headless browser viewport screenshots and computes Structural Similarity Index (SSIM) visual diff matrices to distinguish legitimate dynamic content from hostile tampering.' },
+          { num: '03', title: 'Threat Intelligence Correlation', desc: 'Cross-checks modified scripts, outbound iframe targets, and injected URIs against the VirusTotal API v3 threat graph to determine if an injection vector is malicious.' },
+          { num: '04', title: 'Instant Rollback & SOC Alerting', desc: 'Upon defacement confirmation, triggers an automated rollback to the pristine baseline, restores server files, and pushes instant incident alerts to administrator channels.' }
+        ],
+        repo: 'https://github.com/Indraik/TamperTrace_Platform'
+      },
+      'assetcentric': {
+        title: 'Asset-Centric Threat Intelligence Platform',
+        tagline: 'Automated Threat Intelligence Ingestion & Rule Synthesis Engine',
+        stack: ['Python', 'Flask', 'AbuseIPDB API', 'ThreatFox API', 'YARA Compiler', 'Firewall Synthesizer'],
+        stages: [
+          { num: '01', title: 'OSINT Threat Feed Ingestion', desc: 'Async multi-threaded workers fetch real-time indicators from AbuseIPDB, ThreatFox, and URLhaus with automatic exponential backoff and rate-limit handling.' },
+          { num: '02', title: 'IOC Normalization & Confidence Scoring', desc: 'Parses IP addresses, CIDR blocks, SHA-256 hashes, and malware domains into normalized IOC schemas and computes confidence scores based on threat repetition.' },
+          { num: '03', title: 'Automated YARA & Firewall Rule Synthesis', desc: 'Automatically generates compiled YARA rules for endpoint detection and compiles IP blocklists formatted for iptables/nftables and cloud firewalls.' },
+          { num: '04', title: 'SOC Dispatch & Metric Correlation', desc: 'Provides security analysts with an interactive web dashboard for real-time indicator searches, exportable CSV/JSON feeds, and SIEM forwarding.' }
+        ],
+        repo: 'https://github.com/Indraik/AssetCentric-CTI-Automation'
+      },
+      'cyberquiz': {
+        title: 'CyberQuiz Platform',
+        tagline: 'Distributed Full-Stack Cybersecurity Assessment Engine',
+        stack: ['React.js', 'Spring Boot (Java)', 'PostgreSQL', 'RESTful APIs', 'JWT Auth'],
+        stages: [
+          { num: '01', title: 'Interactive Client SPA (React)', desc: 'Component-driven UI engineered for fast responsive quiz rendering, timed countdown loops, client-side score persistence, and dynamic question progression.' },
+          { num: '02', title: 'Enterprise Backend (Spring Boot / Java)', desc: 'Robust REST controllers managing security domain questions, validating answer hashes, authenticating administrative updates, and enforcing rate limiting.' },
+          { num: '03', title: 'PostgreSQL Relational DB', desc: 'Normalized relational schema storing categorized quiz banks, participant metadata, timestamps, and historical performance indices.' },
+          { num: '04', title: 'High-Throughput Leaderboard Engine', desc: 'Optimized indexed SQL queries providing live participant rankings with sub-50ms latency under simulated multi-user concurrent loads.' }
+        ],
+        repo: 'https://github.com/Indraik/Cyber-Quiz'
+      },
+      'domainscanner': {
+        title: 'Domain Security Scanner',
+        tagline: 'DNS Configuration Auditor & Multi-Threaded Port Scanner',
+        stack: ['Python', 'Flask', 'Socket Library', 'DNSSEC Validator', 'ReportLab PDF Engine'],
+        stages: [
+          { num: '01', title: 'DNS Posture & Trust Chain Audit', desc: 'Performs DNS lookups to audit SPF record validity, DKIM alignment, DMARC enforcement policies, and DNSSEC cryptographic signature validity.' },
+          { num: '02', title: 'High-Speed Socket Port Reconnaissance', desc: 'Multi-threaded raw TCP socket scanner checks critical network ports, assesses service banners, and flags dangerous exposures.' },
+          { num: '03', title: 'SSL/TLS Cipher Suite Evaluation', desc: 'Establishes TLS handshakes to verify certificate chain validity, certificate authority trust, expiry warnings, and strict HSTS headers.' },
+          { num: '04', title: 'Automated PDF Risk Scorecard Synthesis', desc: 'Compiles technical scan telemetry into a structured executive PDF risk summary report ready for stakeholder debriefs (Best Project Award winner).' }
+        ],
+        repo: 'https://github.com/Indraik/Domain_Security_Scanner'
+      },
+      'fundtrail': {
+        title: 'FundTrail Analysis Tool',
+        tagline: 'Government Financial Crime Investigation & Flow Graph System',
+        stack: ['Flask', 'MySQL', 'Python', 'D3.js Graph Visualizer', 'Excel/CSV Forensic Parser'],
+        stages: [
+          { num: '01', title: 'Disparate Statement Normalization', desc: 'Normalizes and parses varied multi-bank statements (Excel, CSV) into standardized transaction schemas using Python Pandas and regular expressions.' },
+          { num: '02', title: 'Relational Forensics DB (MySQL)', desc: 'Stores normalized accounts, transaction amounts, timestamps, IFSC branch codes, and suspect notes with relational indexing for rapid query retrieval.' },
+          { num: '03', title: 'Mule Account & Layering Detection', desc: 'Identifies suspicious layering patterns, rapid in-and-out transfers, circular routing, and high-frequency intermediary mule bank accounts.' },
+          { num: '04', title: 'Interactive D3.js Fund-Flow Visualization', desc: 'Renders dynamic directed graph visualizers mapping the complete path of stolen funds across bank branches, directly aiding active police investigations.' }
+        ],
+        repo: 'https://github.com/Indraik'
+      },
+      'taskmaster': {
+        title: 'Task Master Pro',
+        tagline: 'Full-Stack Workflow Management & Task Prioritization Platform',
+        stack: ['React.js', 'Node.js', 'Express', 'REST APIs', 'State Management'],
+        stages: [
+          { num: '01', title: 'Reactive UI & State Management', desc: 'Clean, modern user interface with responsive layouts, categorized priority filtering, search indexing, and real-time state changes.' },
+          { num: '02', title: 'RESTful API Layer (Express)', desc: 'Backend CRUD endpoints with schema validation, middleware error handling, and structured response serialization.' },
+          { num: '03', title: 'Workflow Prioritization Engine', desc: 'Organizes tasks into actionable queues with status metrics (Pending, In-Progress, Completed) and priority tagging.' },
+          { num: '04', title: 'Performance Optimization', desc: 'Sub-10ms API latency and lightweight asset delivery optimized for smooth mobile and desktop productivity workflows.' }
+        ],
+        repo: 'https://github.com/Indraik/Task_Master_Pro'
+      }
+    };
+
+    function openArchModal(projKey) {
+      const data = projectArchitectures[projKey];
+      if (!data || !archModal) return;
+
+      archModalTitle.textContent = data.title;
+      archModalBody.innerHTML = `
+        <p class="arch-tagline"><i class="fas fa-network-wired"></i> ${data.tagline}</p>
+        
+        <div class="arch-stack-bar">
+          <span class="arch-stack-label">Core Architecture:</span>
+          ${data.stack.map(s => `<span class="arch-pill">${s}</span>`).join('')}
+        </div>
+
+        <div class="arch-pipeline-grid">
+          ${data.stages.map(st => `
+            <div class="arch-step-card">
+              <div class="arch-step-num">${st.num}</div>
+              <div class="arch-step-content">
+                <div class="arch-step-title">${st.title}</div>
+                <div class="arch-step-desc">${st.desc}</div>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+
+        <div class="arch-modal-footer">
+          <a href="${data.repo}" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <i class="fab fa-github"></i> View Repository Source
+          </a>
+          <button type="button" class="btn-ghost" onclick="closeArchModalFunc()">Close Overview</button>
+        </div>
+      `;
+
+      archModal.classList.add('open');
+      archModal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeArchModalFunc() {
+      if (!archModal) return;
+      archModal.classList.remove('open');
+      archModal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (closeArchModalBtn) closeArchModalBtn.addEventListener('click', closeArchModalFunc);
+
+    if (archModal) {
+      archModal.addEventListener('click', (e) => {
+        if (e.target === archModal) closeArchModalFunc();
+      });
+    }
+
+    document.querySelectorAll('.btn-arch').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const archKey = btn.getAttribute('data-arch');
+        if (archKey) openArchModal(archKey);
+      });
     });
   </script>
 </body>
