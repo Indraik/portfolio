@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -33,6 +34,7 @@
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
   <div class="grid-overlay" aria-hidden="true"></div>
@@ -42,7 +44,8 @@
     <div class="nav-inner">
       <a href="#" class="nav-brand"><span class="brand-bracket">[</span>Indra<span class="brand-bracket">]</span></a>
       <div class="nav-actions">
-        <button class="cmd-palette-trigger" id="openPalette" aria-label="Open Command Palette (Ctrl+K)" title="Command Palette (Ctrl+K)">
+        <button class="cmd-palette-trigger" id="openPalette" aria-label="Open Command Palette (Ctrl+K)"
+          title="Command Palette (Ctrl+K)">
           <i class="fas fa-terminal"></i> <span class="cmd-shortcut">⌘K</span>
         </button>
         <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
@@ -52,12 +55,13 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
-        <li><a href="#labs">Labs & Code</a></li>
-        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#labs">Labs &amp; Code</a></li>
         <li><a href="#achievements">Achievements</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="docs/IndraKumar_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-outline">↓ Resume</a></li>
+        <li><a href="docs/IndraKumar_CV.pdf" target="_blank" rel="noopener noreferrer" class="btn-outline">↓ Resume</a>
+        </li>
       </ul>
     </div>
   </nav>
@@ -297,11 +301,476 @@
     </div>
   </section>
 
-  <!-- LABS & CODE -->
+  <!-- PROJECTS (PRIMARY PROOF OF WORK) -->
+  <section id="projects">
+    <div class="container">
+      <div class="section-label">03 / PROJECTS</div>
+      <h2 class="section-title">Primary Proof of Work &amp; Systems Built</h2>
+
+      <!-- Project Category Filters -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All <span class="filter-count">6</span></button>
+        <button class="filter-btn" data-filter="featured"><i class="fas fa-star"></i> Featured <span
+            class="filter-count">4</span></button>
+        <button class="filter-btn" data-filter="security">Cybersecurity &amp; CTI <span
+            class="filter-count">4</span></button>
+        <button class="filter-btn" data-filter="software">Full-Stack &amp; Web <span
+            class="filter-count">3</span></button>
+        <button class="filter-btn" data-filter="automation">Security Automation <span
+            class="filter-count">3</span></button>
+      </div>
+
+      <!-- FEATURED PROJECTS -->
+      <div class="proj-section-lead">
+        <span class="badge-featured"><i class="fas fa-shield-halved"></i> Featured Engineering Systems</span>
+        <p class="proj-section-desc">Key systems demonstrating backend craftsmanship, security automation, and
+          real-world impact.</p>
+      </div>
+
+      <div class="projects-grid">
+
+        <!-- 1. TamperTrace Platform -->
+        <div class="proj-card featured" data-category="featured security automation">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-shield-virus"></i></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="tampertrace" title="Inspect System Architecture"><i
+                  class="fas fa-diagram-project"></i> Architecture</button>
+              <a href="https://github.com/Indraik/TamperTrace_Platform" target="_blank" rel="noopener noreferrer"
+                title="View Source on GitHub"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <h3>TamperTrace Platform</h3>
+          <p class="proj-sub">Automated Web Integrity &amp; Defacement Detection Pipeline</p>
+
+          <!-- Proof of Work Screenshot Gallery -->
+          <div class="proj-gallery" aria-label="TamperTrace screenshot gallery">
+            <div class="proj-screenshot-card" data-preview="assets/placeholder-tampertrace-1.png"
+              data-caption="TamperTrace Platform — Real-Time Defacement Detection &amp; Automated Rollback (Automated SSIM visual trigger, Stage: DEFACED, Integrity alert, instant 'Restore Safe State' baseline rollback, and red active integrity ratio)">
+              <div class="proj-screenshot-thumb">
+                <img src="assets/placeholder-tampertrace-1.png" alt="TamperTrace Real-Time Defacement Detection and 1-Click Rollback" loading="lazy" />
+                <div class="thumb-overlay"><i class="fas fa-expand-arrows-alt"></i> Click to Inspect</div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-triangle-exclamation"></i> Defacement Detection &amp; Rollback</div>
+            </div>
+
+            <div class="proj-screenshot-card" data-preview="assets/placeholder-tampertrace-2.png"
+              data-caption="TamperTrace Platform — Forensic Incident Logs &amp; Visual Diffing Telemetry (Audited tampering records, 20.13% structural SSIM visual diff calculation, forensic heatmap inspection viewer, and Executive PDF incident reporting)">
+              <div class="proj-screenshot-thumb">
+                <img src="assets/placeholder-tampertrace-2.png" alt="TamperTrace Forensic Incident Logs and 20.13% Visual Diff Telemetry" loading="lazy" />
+                <div class="thumb-overlay"><i class="fas fa-expand-arrows-alt"></i> Click to Inspect</div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-chart-line"></i> Forensic Logs &amp; 20% Diff</div>
+            </div>
+
+            <div class="proj-screenshot-card" data-preview="assets/placeholder-tampertrace-3.png"
+              data-caption="TamperTrace Platform — Continuous Monitoring Grid &amp; Threat Intelligence (Stage 3/3 Active SSIM Shield telemetry, on-demand VirusTotal v3 API scanning, live target health grid, and automated email alerts)">
+              <div class="proj-screenshot-thumb">
+                <img src="assets/placeholder-tampertrace-3.png" alt="TamperTrace Continuous Monitoring Grid and Threat Intelligence Console" loading="lazy" />
+                <div class="thumb-overlay"><i class="fas fa-expand-arrows-alt"></i> Click to Inspect</div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-shield-halved"></i> Active SSIM Shield &amp; Grid</div>
+            </div>
+          </div>
+
+          <p class="proj-desc">
+            Web applications face unauthorized script injections, defacement, and asset tampering that evade traditional
+            boundary firewalls. Built an automated web integrity monitoring platform using SSIM visual comparison,
+            semantic HTML AST parsing, and the VirusTotal API v3 threat graph. The crawler captures baseline
+            cryptographic SHA-256 hashes of critical script assets, flags visual discrepancies, and triggers automated
+            baseline backups with one-click rollback to eliminate attacker dwell time.
+          </p>
+
+          <ul class="proj-highlights">
+            <li><i class="fas fa-check-circle"></i> SSIM visual diffing matrix distinguishing cosmetic changes from
+              hostile tampering</li>
+            <li><i class="fas fa-check-circle"></i> Semantic DOM AST parsing and cryptographic script hash verification
+            </li>
+            <li><i class="fas fa-check-circle"></i> Threat graph correlation of injected scripts &amp; URIs via
+              VirusTotal API v3</li>
+            <li><i class="fas fa-check-circle"></i> Automated baseline backups with one-click rollback and immediate
+              admin alerting</li>
+          </ul>
+
+          <div class="proj-stack">
+            <span>Python</span><span>Flask</span><span>SSIM Hashing</span><span>VirusTotal v3</span><span>Automated
+              Rollback</span>
+          </div>
+        </div>
+
+        <!-- 2. Asset-Centric CTI Platform -->
+        <div class="proj-card featured" data-category="featured security automation">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-crosshairs"></i></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="assetcentric" title="Inspect System Architecture"><i
+                  class="fas fa-diagram-project"></i> Architecture</button>
+              <a href="https://github.com/Indraik/AssetCentric-CTI-Automation" target="_blank" rel="noopener noreferrer"
+                title="View Source on GitHub"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <h3>Asset-Centric Threat Intelligence</h3>
+          <p class="proj-sub">Automated Threat Intelligence Ingestion &amp; Rule Synthesis Engine</p>
+
+          <!-- Proof of Work Screenshot Gallery -->
+          <div class="proj-gallery" aria-label="AssetCentric CTI screenshot gallery">
+            <div class="proj-screenshot-card" data-preview="assetcentric-1"
+              data-caption="OSINT Threat Feed Ingestion (AbuseIPDB, ThreatFox, URLhaus)">
+              <div class="proj-screenshot-thumb">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span
+                    class="mockup-dot green"></span>
+                  <span class="mockup-title">osint_feed_worker.py</span>
+                </div>
+                <div class="mockup-body">
+                  <i class="fas fa-rss mockup-icon"></i>
+                  <span class="mockup-label">OSINT Ingestion Feed</span>
+                  <span class="mockup-sub">Concurrent Thread Workers</span>
+                </div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-expand-arrows-alt"></i> Threat Feed Ingestion</div>
+            </div>
+
+            <div class="proj-screenshot-card" data-preview="assetcentric-2"
+              data-caption="IOC Normalization &amp; Confidence Scoring Engine">
+              <div class="proj-screenshot-thumb">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span
+                    class="mockup-dot green"></span>
+                  <span class="mockup-title">ioc_normalizer.py</span>
+                </div>
+                <div class="mockup-body">
+                  <i class="fas fa-filter mockup-icon"></i>
+                  <span class="mockup-label">IOC Normalization</span>
+                  <span class="mockup-sub">Cross-Source Confidence</span>
+                </div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-expand-arrows-alt"></i> IOC Normalization Engine
+              </div>
+            </div>
+
+            <div class="proj-screenshot-card" data-preview="assetcentric-3"
+              data-caption="Automated YARA Rule &amp; Firewall Blocklist Generator">
+              <div class="proj-screenshot-thumb">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span><span class="mockup-dot yellow"></span><span
+                    class="mockup-dot green"></span>
+                  <span class="mockup-title">yara_rule_generator.py</span>
+                </div>
+                <div class="mockup-body">
+                  <i class="fas fa-shield-virus mockup-icon"></i>
+                  <span class="mockup-label">YARA &amp; Firewall Rules</span>
+                  <span class="mockup-sub">Auto-Compiled Defenses</span>
+                </div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-expand-arrows-alt"></i> Automated Rule Synthesis
+              </div>
+            </div>
+          </div>
+
+          <p class="proj-desc">
+            Security operations teams face alert fatigue and delayed triage due to high-volume, unnormalized threat
+            feeds. Built an automated CTI platform that continuously ingests real-time threat indicators from AbuseIPDB,
+            ThreatFox, and URLhaus using concurrent worker threads with exponential backoff. The platform normalizes
+            IPs, CIDR ranges, and malware hashes into structured schemas and automatically synthesizes compiled YARA
+            rules and cloud firewall blocklists for immediate defensive posture.
+          </p>
+
+          <ul class="proj-highlights">
+            <li><i class="fas fa-check-circle"></i> Multi-threaded async workers ingesting real-time OSINT indicators
+              with rate-limit handling</li>
+            <li><i class="fas fa-check-circle"></i> Automated IOC normalization and multi-source confidence scoring</li>
+            <li><i class="fas fa-check-circle"></i> Automated synthesis of compiled YARA detection rules for endpoint
+              protection</li>
+            <li><i class="fas fa-check-circle"></i> Cloud firewall and iptables blocklist compilation for instant
+              perimeter hardening</li>
+          </ul>
+
+          <div class="proj-stack">
+            <span>Python</span><span>Flask</span><span>AbuseIPDB API</span><span>ThreatFox API</span><span>YARA
+              Rules</span><span>IOC Correlation</span>
+          </div>
+        </div>
+
+        <!-- 3. Domain Security Scanner -->
+        <div class="proj-card featured" data-category="featured security automation">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-globe"></i></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="domainscanner" title="Inspect System Architecture"><i
+                  class="fas fa-diagram-project"></i> Architecture</button>
+              <a href="https://github.com/Indraik/Domain_Security_Scanner" target="_blank" rel="noopener noreferrer"
+                title="View Source on GitHub"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <h3>Domain Security Scanner</h3>
+          <p class="proj-sub">DNS Security Posture Assessment, Concurrent Port Scanner &amp; PDF Risk Engine <span
+              class="proj-award"><i class="fas fa-trophy"></i> Best Project Award</span></p>
+
+          <!-- Proof of Work Screenshot Gallery -->
+          <div class="proj-gallery" aria-label="Domain Security Scanner screenshot gallery">
+            <div class="proj-screenshot-card" data-preview="assets/placeholder-domain-1.png"
+              data-caption="Domain Security Scanner — Automated Security Assessment Scorecard (Security Score: 80/100 Strong, Verdict: Secure, SPF/DMARC Auth Compliance, MX Routing, and Executive PDF Report Export)">
+              <div class="proj-screenshot-thumb">
+                <img src="assets/placeholder-domain-1.png" alt="Domain Security Assessment Scorecard (80/100 Strong)" loading="lazy" />
+                <div class="thumb-overlay"><i class="fas fa-expand-arrows-alt"></i> Click to Inspect</div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-shield-halved"></i> Security Scorecard (80/100)</div>
+            </div>
+
+            <div class="proj-screenshot-card" data-preview="assets/placeholder-domain-2.png"
+              data-caption="Domain Security Scanner — Raw TCP Port Reconnaissance (Ports 80, 443, 8080, 8443) &amp; HTTP Security Headers Audit (HSTS, CSP, X-Frame-Options, DNSSEC Integrity, and Prioritized Remediation Playbooks)">
+              <div class="proj-screenshot-thumb">
+                <img src="assets/placeholder-domain-2.png" alt="TCP Port Reconnaissance &amp; HTTP Security Headers Audit" loading="lazy" />
+                <div class="thumb-overlay"><i class="fas fa-expand-arrows-alt"></i> Click to Inspect</div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-network-wired"></i> Port Audit &amp; Headers</div>
+            </div>
+
+            <div class="proj-screenshot-card" data-preview="assets/placeholder-domain-3.png"
+              data-caption="Domain Security Scanner — Parallel Multi-Threaded Security Audit Engine (Real-time radar probe: DNS &amp; MX resolution, SPF mechanics, TLS certificate chain evaluation, and raw TCP port scanning)">
+              <div class="proj-screenshot-thumb">
+                <img src="assets/placeholder-domain-3.png" alt="Conducting Parallel Security Audit Engine" loading="lazy" />
+                <div class="thumb-overlay"><i class="fas fa-expand-arrows-alt"></i> Click to Inspect</div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-microchip"></i> Parallel Audit Engine</div>
+            </div>
+          </div>
+
+          <p class="proj-desc">
+            Organizations frequently suffer email spoofing and network exposure due to misconfigured DNS records and
+            unmonitored ports. Engineered an automated domain auditor that verifies SPF alignment, DKIM signatures,
+            DMARC policy enforcement, and DNSSEC cryptographic trust chains. Features a multi-threaded raw TCP socket
+            scanner, SSL/TLS handshake validator, and an automated PDF report generator (awarded Best Project).
+          </p>
+
+          <ul class="proj-highlights">
+            <li><i class="fas fa-check-circle"></i> Cryptographic DNSSEC trust chain validation and SPF/DKIM/DMARC
+              policy evaluation</li>
+            <li><i class="fas fa-check-circle"></i> High-speed multi-threaded TCP socket port reconnaissance with
+              service banner detection</li>
+            <li><i class="fas fa-check-circle"></i> SSL/TLS cipher suite, certificate chain trust, and HSTS enforcement
+              verification</li>
+            <li><i class="fas fa-check-circle"></i> Automated executive PDF risk scorecard synthesis using ReportLab
+            </li>
+          </ul>
+
+          <div class="proj-stack">
+            <span>Flask</span><span>Python Sockets</span><span>DNSSEC
+              Validator</span><span>DMARC/SPF/DKIM</span><span>ReportLab PDF</span>
+          </div>
+        </div>
+
+        <!-- 4. FundTrail Analysis Tool -->
+        <div class="proj-card featured" data-category="featured software security">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-scale-balanced"></i></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="fundtrail" title="Inspect System Architecture"><i
+                  class="fas fa-diagram-project"></i> Architecture</button>
+              <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer"
+                title="GitHub Profile (Internal Govt Tool)"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <h3>FundTrail Analysis Tool</h3>
+          <p class="proj-sub">Financial Transaction Forensics &amp; Interactive Fund-Flow Graph <span
+              class="proj-award"><i class="fas fa-landmark"></i> Tamil Nadu Cyber Crime Wing System</span></p>
+
+          <!-- Proof of Work Screenshot Gallery -->
+          <div class="proj-gallery" aria-label="FundTrail screenshot gallery">
+            <div class="proj-screenshot-card" data-preview="assets/placeholder-fundtrail-1.png"
+              data-caption="FundTrail Analysis Tool — Interactive D3.js Forensic Fund Flow Graph (Multi-hop fund trail tracking: Complaint Root, Victim Account, Mule Hops L2–L5, and frozen Funds on Hold/Lien, with Section 65B Dossier Export)">
+              <div class="proj-screenshot-thumb">
+                <img src="assets/placeholder-fundtrail-1.png" alt="Interactive D3.js Forensic Fund Flow Graph with Mule Account Hops" loading="lazy" />
+                <div class="thumb-overlay"><i class="fas fa-expand-arrows-alt"></i> Click to Inspect</div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-diagram-project"></i> D3.js Fund Flow Graph</div>
+            </div>
+
+            <div class="proj-screenshot-card" data-preview="assets/placeholder-fundtrail-2.png"
+              data-caption="FundTrail Analysis Tool — Cross-Case Syndicate Intelligence &amp; Entity Correlation (Hotlist detecting recurring suspect money mule accounts and laundering bridges linked across multiple independent police complaints)">
+              <div class="proj-screenshot-thumb">
+                <img src="assets/placeholder-fundtrail-2.png" alt="Cross-Case Money Mule Syndicates Hotlist &amp; Entity Correlation" loading="lazy" />
+                <div class="thumb-overlay"><i class="fas fa-expand-arrows-alt"></i> Click to Inspect</div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-user-secret"></i> Mule Syndicate Hotlist</div>
+            </div>
+
+            <div class="proj-screenshot-card" data-preview="assets/placeholder-fundtrail-3.png"
+              data-caption="FundTrail Analysis Tool — Forensic Hotspot &amp; Cluster Intelligence (Suspect IFSC branch frequency analysis, Statement transaction density donut chart, and ₹22.3M+ disputed fund tracking)">
+              <div class="proj-screenshot-thumb">
+                <img src="assets/placeholder-fundtrail-3.png" alt="Forensic Hotspot &amp; Cluster Intelligence Dashboard" loading="lazy" />
+                <div class="thumb-overlay"><i class="fas fa-expand-arrows-alt"></i> Click to Inspect</div>
+              </div>
+              <div class="proj-screenshot-caption"><i class="fas fa-chart-pie"></i> Hotspot &amp; Cluster Intel</div>
+            </div>
+          </div>
+
+          <p class="proj-desc">
+            Financial fraud investigations are hindered by disparate bank statement formats and complex multi-account
+            layering schemes. Engineered for the Tamil Nadu Cyber Crime Wing across 5+ active cases, FundTrail parses
+            varied multi-bank Excel and CSV statements into a standardized MySQL forensics schema. The system renders
+            interactive D3.js directed graph visualizers, mapping the complete flow of stolen funds across bank branches
+            to accelerate active police investigations.
+          </p>
+
+          <ul class="proj-highlights">
+            <li><i class="fas fa-check-circle"></i> Python Pandas normalizer parsing disparate multi-bank statement
+              schemas into clean datasets</li>
+            <li><i class="fas fa-check-circle"></i> Relational MySQL forensics database with indexed accounts, IFSC
+              codes, and transaction records</li>
+            <li><i class="fas fa-check-circle"></i> Automated detection of intermediary mule accounts and circular
+              layering transfers</li>
+            <li><i class="fas fa-check-circle"></i> Interactive D3.js directed flow graph visualizer mapping money
+              trails across branches</li>
+          </ul>
+
+          <div class="proj-stack">
+            <span>Flask</span><span>MySQL</span><span>D3.js Graphs</span><span>Python</span><span>Financial
+              Forensics</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- MORE PROJECTS -->
+      <div class="proj-section-lead more-lead">
+        <span class="badge-more"><i class="fas fa-cubes"></i> Additional Engineering Work</span>
+        <h3>More Full-Stack &amp; Software Projects</h3>
+      </div>
+
+      <div class="projects-grid more-grid">
+
+        <!-- 5. CyberQuiz Platform -->
+        <div class="proj-card" data-category="software security">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="cyberquiz" title="Inspect System Architecture"><i
+                  class="fas fa-diagram-project"></i> Architecture</button>
+              <a href="https://github.com/Indraik/Cyber-Quiz" target="_blank" rel="noopener noreferrer"
+                title="View Source on GitHub"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <h3>CyberQuiz Platform</h3>
+          <p class="proj-sub">Full-Stack Cybersecurity Assessment Engine &amp; Leaderboard</p>
+          <p class="proj-desc">
+            Full-stack web application built with React, Spring Boot, and PostgreSQL. Features real-time timed challenge
+            sessions, live leaderboards with sub-50ms query response under concurrent user load, secure RESTful API
+            controllers, and an administrative challenge bank portal.
+          </p>
+          <div class="proj-stack">
+            <span>React.js</span><span>Spring Boot</span><span>Java</span><span>PostgreSQL</span><span>REST APIs</span>
+          </div>
+        </div>
+
+        <!-- 6. Task Master Pro -->
+        <div class="proj-card" data-category="software">
+          <div class="scanline"></div>
+          <div class="proj-top">
+            <div class="proj-icon"><i class="fas fa-tasks"></i></div>
+            <div class="proj-links">
+              <button type="button" class="btn-arch" data-arch="taskmaster" title="Inspect System Architecture"><i
+                  class="fas fa-diagram-project"></i> Architecture</button>
+              <a href="https://github.com/Indraik/Task_Master_Pro" target="_blank" rel="noopener noreferrer"
+                title="View Source on GitHub"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+          <h3>Task Master Pro</h3>
+          <p class="proj-sub">Full-Stack Task &amp; Workflow Prioritization Platform</p>
+          <p class="proj-desc">
+            Full-stack productivity web application engineered with a clean, responsive interface, reactive state
+            management, categorized priority filtering, and optimized backend CRUD endpoints delivering sub-10ms API
+            response times.
+          </p>
+          <div class="proj-stack">
+            <span>React.js</span><span>Node.js</span><span>Express</span><span>REST APIs</span><span>State
+              Management</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCE (WORK HISTORY) -->
+  <section id="experience">
+    <div class="container">
+      <div class="section-label">04 / EXPERIENCE</div>
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="timeline">
+
+        <div class="tl-item">
+          <div class="tl-meta">
+            <span class="tl-date">Dec 2024 – Jan 2025</span>
+            <span class="tl-duration">45 Days</span>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-title">Cyber Crime Intern</h3>
+                <p class="tl-company"><i class="fas fa-building"></i> Tamil Nadu Cyber Crime Wing</p>
+              </div>
+              <span class="tl-badge">Government</span>
+            </div>
+            <p class="tl-desc">
+              <strong>Action:</strong> Engineered the <strong>FundTrail Analysis Tool</strong> backend using Flask and
+              MySQL to support active law enforcement financial fraud investigations.<br />
+              <strong>Technical Work:</strong> Constructed automated Python normalization scripts for disparate bank
+              statements (Excel, CSV), designed relational database schemas, and integrated D3.js fund-flow graph
+              visualizations for multi-bank layering analysis.<br />
+              <strong>Result:</strong> Deployed across 5+ active fraud investigations, enabling officers to identify
+              circular routing, intermediary mule accounts, and transaction timelines efficiently.
+            </p>
+            <div class="tl-tags">
+              <span>Flask</span><span>MySQL</span><span>Log Analysis</span>
+              <span>Financial Forensics</span><span>Python</span><span>D3.js</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="tl-item">
+          <div class="tl-meta">
+            <span class="tl-date">Jun 2024</span>
+            <span class="tl-duration">15 Days</span>
+          </div>
+          <div class="tl-card">
+            <div class="tl-header">
+              <div>
+                <h3 class="tl-title">Cybersecurity Intern</h3>
+                <p class="tl-company"><i class="fas fa-building"></i> Hackup Technology</p>
+              </div>
+              <span class="tl-badge">Private</span>
+            </div>
+            <p class="tl-desc">
+              <strong>Action:</strong> Executed vulnerability assessments and traffic analysis across web applications
+              and network segments.<br />
+              <strong>Technical Work:</strong> Conducted OWASP Top 10 testing (SQLi, XSS, Broken Auth), captured and
+              analyzed network packets with Wireshark to identify abnormal request anomalies, and documented attack
+              vectors.<br />
+              <strong>Result:</strong> Delivered structured security assessment reports with prioritized remediation
+              strategies for development teams.
+            </p>
+            <div class="tl-tags">
+              <span>OWASP Top 10</span><span>Wireshark</span><span>Pentest</span><span>Reporting</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- LABS & CODE (SUPPORTING PROOF) -->
   <section id="labs">
     <div class="container">
-      <div class="section-label">03 / LABS & CODE</div>
-      <h2 class="section-title">Practical Labs & Algorithmic Problem Solving</h2>
+      <div class="section-label">05 / LABS &amp; CODE</div>
+      <h2 class="section-title">Hands-On Defense Labs &amp; Problem Solving</h2>
       <div class="labs-grid">
 
         <!-- TRYHACKME CARD -->
@@ -313,7 +782,7 @@
                 <div class="lab-icon thm-icon"><i class="fas fa-fire"></i></div>
                 <div>
                   <h3>TryHackMe</h3>
-                  <p>Practical Cyber Defense & Red Team Labs</p>
+                  <p>Practical Cyber Defense &amp; Hands-On Lab Simulations</p>
                 </div>
               </div>
               <span class="thm-badge"><i class="fas fa-trophy"></i> Top 10% Global Rank</span>
@@ -341,11 +810,11 @@
               <div class="lc-diff-bar">
                 <div class="lc-diff-pill thm-diff-pill soc">
                   <span class="lc-diff-num">30+</span>
-                  <span class="lc-diff-lbl">SOC & Defense</span>
+                  <span class="lc-diff-lbl">SOC &amp; Defense</span>
                 </div>
                 <div class="lc-diff-pill thm-diff-pill web">
                   <span class="lc-diff-num">15+</span>
-                  <span class="lc-diff-lbl">Web & OWASP</span>
+                  <span class="lc-diff-lbl">Web &amp; OWASP</span>
                 </div>
                 <div class="lc-diff-pill thm-diff-pill attack">
                   <span class="lc-diff-num">11+</span>
@@ -358,29 +827,33 @@
               <div class="lab-feat-item">
                 <i class="fas fa-shield-alt" style="color: #38bdf8;"></i>
                 <div>
-                  <strong>Blue Team & SOC Investigations</strong>
-                  <p>Log analysis, event correlation in Splunk, suspicious activity triage, and incident containment.</p>
+                  <strong>Blue Team &amp; SOC Investigations</strong>
+                  <p>Log analysis, event correlation in Splunk, suspicious activity triage, and incident containment.
+                  </p>
                 </div>
               </div>
               <div class="lab-feat-item">
                 <i class="fas fa-network-wired" style="color: #e8a030;"></i>
                 <div>
-                  <strong>Network Forensics & Packet Analysis</strong>
-                  <p>Deep-dive packet capture inspection with Wireshark, dissecting TCP streams, DNS queries, and anomalous payloads.</p>
+                  <strong>Network Forensics &amp; Packet Analysis</strong>
+                  <p>Deep-dive packet capture inspection with Wireshark, dissecting TCP streams, DNS queries, and
+                    anomalous payloads.</p>
                 </div>
               </div>
               <div class="lab-feat-item">
                 <i class="fas fa-crosshairs" style="color: #ff3b4e;"></i>
                 <div>
-                  <strong>Attack Surface & Exploit Defense</strong>
-                  <p>Simulated attack vectors, privilege escalation, web application vulnerabilities, and defense hardening.</p>
+                  <strong>Attack Surface &amp; Exploit Defense</strong>
+                  <p>Simulated attack vectors, privilege escalation, web application vulnerabilities, and defense
+                    hardening.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="lab-actions">
-            <a href="https://tryhackme.com/p/indra02" target="_blank" rel="noopener noreferrer" class="btn-primary" style="background: #c1121f; border-color: #c1121f; color: #fff;">
+            <a href="https://tryhackme.com/p/indra02" target="_blank" rel="noopener noreferrer" class="btn-primary"
+              style="background: #c1121f; border-color: #c1121f; color: #fff;">
               <i class="fas fa-external-link-alt"></i> View TryHackMe Profile
             </a>
             <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer" class="btn-ghost">
@@ -398,10 +871,11 @@
                 <div class="lab-icon"><i class="fas fa-code"></i></div>
                 <div>
                   <h3>LeetCode</h3>
-                  <p>Data Structures & Algorithmic Problem Solving</p>
+                  <p>Data Structures &amp; Algorithmic Problem Solving (Java)</p>
                 </div>
               </div>
-              <span class="live-badge" title="Live stats connected to LeetCode API"><span class="live-dot"></span> Live Sync</span>
+              <span class="live-badge" title="Live stats connected to LeetCode API"><span class="live-dot"></span> Live
+                Sync</span>
             </div>
 
             <div class="lab-metric-panel">
@@ -458,14 +932,16 @@
                 <i class="fas fa-tachometer-alt"></i>
                 <div>
                   <strong>Complexity Optimization</strong>
-                  <p>Rigorous time & space complexity reduction (O(N) & O(log N)), memory efficiency, and clean code.</p>
+                  <p>Rigorous time &amp; space complexity reduction (O(N) &amp; O(log N)), memory efficiency, and clean
+                    code.</p>
                 </div>
               </div>
             </div>
           </div>
 
           <div class="lab-actions">
-            <a href="https://leetcode.com/u/Indrakumar_V/" target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <a href="https://leetcode.com/u/Indrakumar_V/" target="_blank" rel="noopener noreferrer"
+              class="btn-primary">
               <i class="fas fa-external-link-alt"></i> View LeetCode Profile
             </a>
             <a href="https://github.com/Indraik/Leetcode" target="_blank" rel="noopener noreferrer" class="btn-ghost">
@@ -478,202 +954,11 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section id="experience">
-    <div class="container">
-      <div class="section-label">04 / EXPERIENCE</div>
-      <h2 class="section-title">Work History</h2>
-      <div class="timeline">
-
-        <div class="tl-item">
-          <div class="tl-meta">
-            <span class="tl-date">Dec 2024 – Jan 2025</span>
-            <span class="tl-duration">45 Days</span>
-          </div>
-          <div class="tl-card">
-            <div class="tl-header">
-              <div>
-                <h3 class="tl-title">Cyber Crime Intern</h3>
-                <p class="tl-company"><i class="fas fa-building"></i> Tamil Nadu Cyber Crime Wing</p>
-              </div>
-              <span class="tl-badge">Government</span>
-            </div>
-            <p class="tl-desc">
-              Engineered <strong>FundTrail Analysis Tool</strong>, a Flask–MySQL backend system to manage
-              and analyze financial fraud cases across 5+ active investigations. Constructed modules for
-              complaint tracking, officer management, analytics dashboards, and fund-flow visualization.
-              Performed log analysis and transaction monitoring to identify suspicious patterns across
-              structured financial datasets.
-            </p>
-            <div class="tl-tags">
-              <span>Flask</span><span>MySQL</span><span>Log Analysis</span>
-              <span>Financial Forensics</span><span>Python</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="tl-item">
-          <div class="tl-meta">
-            <span class="tl-date">Jun 2024</span>
-            <span class="tl-duration">15 Days</span>
-          </div>
-          <div class="tl-card">
-            <div class="tl-header">
-              <div>
-                <h3 class="tl-title">Cybersecurity Intern</h3>
-                <p class="tl-company"><i class="fas fa-building"></i> Hackup Technology</p>
-              </div>
-              <span class="tl-badge">Private</span>
-            </div>
-            <p class="tl-desc">
-              Executed vulnerability assessments across multiple test web applications using OWASP Top 10
-              attack scenarios. Analyzed network traffic packets using Wireshark to identify abnormal
-              request patterns. Documented vulnerabilities and simulated attack scenarios to build a
-              structured security assessment report.
-            </p>
-            <div class="tl-tags">
-              <span>OWASP Top 10</span><span>Wireshark</span><span>Pentest</span><span>Reporting</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- PROJECTS -->
-  <section id="projects">
-    <div class="container">
-      <div class="section-label">05 / PROJECTS</div>
-      <h2 class="section-title">Selected Work</h2>
-
-      <!-- Project Category Filters -->
-      <div class="project-filters">
-        <button class="filter-btn active" data-filter="all">All <span class="filter-count">6</span></button>
-        <button class="filter-btn" data-filter="security">Cybersecurity & CTI <span class="filter-count">4</span></button>
-        <button class="filter-btn" data-filter="software">Full-Stack & Web <span class="filter-count">3</span></button>
-        <button class="filter-btn" data-filter="automation">Security Automation <span class="filter-count">3</span></button>
-      </div>
-
-      <div class="projects-grid">
-
-        <!-- 1. TamperTrace Platform -->
-        <div class="proj-card featured" data-category="security automation">
-          <div class="scanline"></div>
-          <div class="proj-top">
-            <div class="proj-icon"><i class="fas fa-shield-virus"></i></div>
-            <div class="proj-links">
-              <button type="button" class="btn-arch" data-arch="tampertrace" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
-              <a href="https://github.com/Indraik/TamperTrace_Platform" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <h3>TamperTrace Platform</h3>
-          <p class="proj-sub">Web Integrity & Automated Defacement Detection</p>
-          <p class="proj-desc">Automated platform detecting website tampering and unauthorized modifications using SSIM visual diffing, semantic HTML analysis, and VirusTotal API v3. Features automated baseline backups, admin instant alerts, and one-click rollback restoration.</p>
-          <div class="proj-stack">
-            <span>Python</span><span>Flask</span><span>SSIM Hashing</span><span>VirusTotal v3</span><span>Automated Recovery</span>
-          </div>
-        </div>
-
-        <!-- 2. Asset-Centric CTI Platform -->
-        <div class="proj-card featured" data-category="security automation">
-          <div class="scanline"></div>
-          <div class="proj-top">
-            <div class="proj-icon"><i class="fas fa-crosshairs"></i></div>
-            <div class="proj-links">
-              <button type="button" class="btn-arch" data-arch="assetcentric" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
-              <a href="https://github.com/Indraik/AssetCentric-CTI-Automation" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <h3>Asset-Centric Threat Intelligence</h3>
-          <p class="proj-sub">Threat Intelligence Automation & CTI Platform</p>
-          <p class="proj-desc">Platform analyzing security indicators across domains, IPs, and URLs. Ingests real-time OSINT feeds (AbuseIPDB, URLhaus, ThreatFox) via concurrent worker threads. Correlates ingested logs against normalized IOCs and auto-generates firewall blocklists & YARA rules.</p>
-          <div class="proj-stack">
-            <span>Python</span><span>Flask</span><span>AbuseIPDB</span><span>ThreatFox</span><span>YARA Rules</span><span>IOC Correlation</span>
-          </div>
-        </div>
-
-        <!-- 3. CyberQuiz Platform -->
-        <div class="proj-card" data-category="software security">
-          <div class="scanline"></div>
-          <div class="proj-top">
-            <div class="proj-icon"><i class="fas fa-graduation-cap"></i></div>
-            <div class="proj-links">
-              <button type="button" class="btn-arch" data-arch="cyberquiz" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
-              <a href="https://github.com/Indraik/Cyber-Quiz" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <h3>CyberQuiz Platform</h3>
-          <p class="proj-sub">Full-Stack Cybersecurity Quiz & Assessment Platform</p>
-          <p class="proj-desc">Interactive full-stack web application built with React, Spring Boot, and PostgreSQL. Features real-time timed challenge sessions, live leaderboards, score tracking, RESTful APIs, and an admin question management portal.</p>
-          <div class="proj-stack">
-            <span>React.js</span><span>Spring Boot</span><span>Java</span><span>PostgreSQL</span><span>REST APIs</span>
-          </div>
-        </div>
-
-        <!-- 4. Domain Security Scanner -->
-        <div class="proj-card" data-category="security automation">
-          <div class="scanline"></div>
-          <div class="proj-top">
-            <div class="proj-icon"><i class="fas fa-globe"></i></div>
-            <div class="proj-links">
-              <button type="button" class="btn-arch" data-arch="domainscanner" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
-              <a href="https://github.com/Indraik/Domain_Security_Scanner" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <h3>Domain Security Scanner</h3>
-          <p class="proj-sub">DNS Security Posture Assessment & Vulnerability Audit</p>
-          <p class="proj-desc">Automated security audit tool evaluating domain posture through DNS configuration (MX, SPF, DKIM, DMARC, DNSSEC). Features high-speed concurrent socket port scanning, SSL/TLS header verification, and downloadable PDF risk reports. <span class="proj-award"><i class="fas fa-star"></i> Best Project Award</span></p>
-          <div class="proj-stack">
-            <span>Flask</span><span>DNSSEC</span><span>DMARC/SPF/DKIM</span><span>Port Scanner</span><span>PDF Reporting</span>
-          </div>
-        </div>
-
-        <!-- 5. FundTrail Analysis Tool -->
-        <div class="proj-card" data-category="software security">
-          <div class="scanline"></div>
-          <div class="proj-top">
-            <div class="proj-icon"><i class="fas fa-scale-balanced"></i></div>
-            <div class="proj-links">
-              <button type="button" class="btn-arch" data-arch="fundtrail" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
-              <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer" title="GitHub Profile (Internal Govt Tool)"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <h3>FundTrail Analysis Tool</h3>
-          <p class="proj-sub">Financial Transaction Forensics & Fund-Flow Visualization</p>
-          <p class="proj-desc">Engineered for the Tamil Nadu Cyber Crime Wing to manage and investigate financial fraud cases across 5+ active cases. Built Python Excel normalizers, MySQL transaction database, and D3.js interactive fund-flow graph visualizations. <span class="proj-award"><i class="fas fa-landmark"></i> Tamil Nadu Cyber Crime Wing System</span></p>
-          <div class="proj-stack">
-            <span>Flask</span><span>MySQL</span><span>D3.js</span><span>Python</span><span>Financial Forensics</span>
-          </div>
-        </div>
-
-        <!-- 6. Task Master Pro -->
-        <div class="proj-card" data-category="software">
-          <div class="scanline"></div>
-          <div class="proj-top">
-            <div class="proj-icon"><i class="fas fa-tasks"></i></div>
-            <div class="proj-links">
-              <button type="button" class="btn-arch" data-arch="taskmaster" title="Inspect System Architecture"><i class="fas fa-diagram-project"></i> Arch</button>
-              <a href="https://github.com/Indraik/Task_Master_Pro" target="_blank" rel="noopener noreferrer" title="View Source on GitHub"><i class="fab fa-github"></i></a>
-            </div>
-          </div>
-          <h3>Task Master Pro</h3>
-          <p class="proj-sub">Full-Stack Task & Workflow Management Platform</p>
-          <p class="proj-desc">Full-stack productivity web application engineered with a clean, responsive interface, reactive state management, categorized priority filtering, and optimized backend CRUD endpoints.</p>
-          <div class="proj-stack">
-            <span>React.js</span><span>Node.js</span><span>Express</span><span>REST APIs</span><span>State Management</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
   <!-- ACHIEVEMENTS -->
   <section id="achievements">
     <div class="container">
       <div class="section-label">06 / ACHIEVEMENTS</div>
-      <h2 class="section-title">Recognition & Growth</h2>
+      <h2 class="section-title">Certifications, Awards &amp; Research</h2>
       <div class="ach-grid">
 
         <div class="ach-card">
@@ -684,7 +969,7 @@
           <ul>
             <li>NPTEL – Practical Cyber Security <span class="cert-badge">Elite + Gold · 2025</span></li>
             <li>NPTEL – Cyber Security and Privacy <span class="cert-badge">2024</span></li>
-            <li>NPTEL – Privacy & Security in Online Social Media <span class="cert-badge">Elite · 2025</span></li>
+            <li>NPTEL – Privacy &amp; Security in Online Social Media <span class="cert-badge">Elite · 2025</span></li>
             <li>EC-Council – Network Security Lab (Practical) <span class="cert-badge">2026</span></li>
             <li>EC-Council – Kali Linux for Penetration Testers <span class="cert-badge">2026</span></li>
           </ul>
@@ -694,12 +979,16 @@
           <div class="scanline"></div>
           <div class="ach-num">02</div>
           <div class="ach-icon"><i class="fas fa-award"></i></div>
-          <h3>Awards & Research</h3>
+          <h3>Awards &amp; Research</h3>
           <ul>
-            <li>IEEE RICE-2025 — Ransomware Attacks on Healthcare Organizations, Hyderabad</li>
-            <li>International Conference — Engineering & Technology, UAE (2024)</li>
-            <li>Best Project Award — Domain Security Analysis (Intra-college Expo)</li>
-            <li>Best Mini Project Award — DNS Record Finder</li>
+            <li>
+              <strong>IEEE RICE-2025</strong> — Ransomware Attacks on Healthcare Organizations, Hyderabad
+              <div style="margin-top: 6px;"><span class="cert-badge"><i class="fas fa-book-bookmark"></i> IEEE Published
+                  Author</span></div>
+            </li>
+            <li>International Conference — Engineering &amp; Technology, UAE (2024)</li>
+            <li><strong>Best Project Award</strong> — Domain Security Analysis (Intra-college Expo)</li>
+            <li><strong>Best Mini Project Award</strong> — DNS Record Finder</li>
           </ul>
         </div>
 
@@ -707,10 +996,12 @@
           <div class="scanline"></div>
           <div class="ach-num">03</div>
           <div class="ach-icon"><i class="fas fa-trophy"></i></div>
-          <h3>Hackathons</h3>
+          <h3>Hackathons &amp; Competitions</h3>
           <ul>
-            <li>Smart India Hackathon (SIH) 2024 — Drones & Technology Track, real-time disaster information aggregation system</li>
-            <li>Pentathon 2025 — CTF challenges in cryptography, reverse engineering, and web exploitation</li>
+            <li><strong>Smart India Hackathon (SIH) 2024</strong> — Drones &amp; Technology Track, real-time disaster
+              information aggregation system</li>
+            <li><strong>Pentathon 2025</strong> — CTF challenges in cryptography, reverse engineering, and web
+              exploitation</li>
           </ul>
         </div>
 
@@ -722,12 +1013,12 @@
   <section id="contact">
     <div class="container">
       <div class="section-label">07 / CONTACT</div>
-      <h2 class="section-title">Let's Connect</h2>
+      <h2 class="section-title">Open to Software &amp; Security Opportunities</h2>
       <div class="contact-grid">
         <div class="contact-left">
           <p class="contact-intro">
-            Seeking a <strong>Cybersecurity Engineer, SOC Analyst, or Software Developer</strong> role to build
-            high-impact platforms and strengthen threat detection and incident response capabilities. Feel free to reach out.
+            Seeking <strong>Software Development, Cybersecurity Engineering, or SOC opportunities</strong> where I can
+            build secure systems, automate security workflows, and solve complex engineering problems.
           </p>
           <div class="contact-detail">
             <i class="fas fa-envelope"></i>
@@ -735,7 +1026,8 @@
               <span class="cd-label">Email</span>
               <a href="mailto:indrakumarvelusamy@gmail.com">indrakumarvelusamy@gmail.com</a>
             </div>
-            <button type="button" class="copy-btn" data-copy="indrakumarvelusamy@gmail.com" title="Copy Email to Clipboard" aria-label="Copy email to clipboard">
+            <button type="button" class="copy-btn" data-copy="indrakumarvelusamy@gmail.com"
+              title="Copy Email to Clipboard" aria-label="Copy email to clipboard">
               <i class="fas fa-copy"></i>
             </button>
           </div>
@@ -745,7 +1037,8 @@
               <span class="cd-label">Phone</span>
               <a href="tel:+919965716838">+91 99657 16838</a>
             </div>
-            <button type="button" class="copy-btn" data-copy="+919965716838" title="Copy Phone to Clipboard" aria-label="Copy phone number to clipboard">
+            <button type="button" class="copy-btn" data-copy="+919965716838" title="Copy Phone to Clipboard"
+              aria-label="Copy phone number to clipboard">
               <i class="fas fa-copy"></i>
             </button>
           </div>
@@ -757,10 +1050,14 @@
             </div>
           </div>
           <div class="social-row">
-            <a href="https://www.linkedin.com/in/indra0210/" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
-            <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fab fa-github"></i> GitHub</a>
-            <a href="https://leetcode.com/u/Indrakumar_V/" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fas fa-code"></i> LeetCode</a>
-            <a href="https://tryhackme.com/p/indra02" target="_blank" rel="noopener noreferrer" class="social-btn"><i class="fas fa-user-secret"></i> TryHackMe</a>
+            <a href="https://www.linkedin.com/in/indra0210/" target="_blank" rel="noopener noreferrer"
+              class="social-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer" class="social-btn"><i
+                class="fab fa-github"></i> GitHub</a>
+            <a href="https://leetcode.com/u/Indrakumar_V/" target="_blank" rel="noopener noreferrer"
+              class="social-btn"><i class="fas fa-code"></i> LeetCode</a>
+            <a href="https://tryhackme.com/p/indra02" target="_blank" rel="noopener noreferrer" class="social-btn"><i
+                class="fas fa-user-secret"></i> TryHackMe</a>
           </div>
         </div>
 
@@ -791,23 +1088,43 @@
   <!-- FOOTER -->
   <footer>
     <div class="footer-inner container">
-      <span class="footer-brand"><span class="brand-bracket">[</span>IK<span class="brand-bracket">]</span> Indra Kumar V</span>
-      <span class="footer-copy">© 2026 · Designed & Built by Indra</span>
+      <span class="footer-brand"><span class="brand-bracket">[</span>IK<span class="brand-bracket">]</span> Indra Kumar
+        V</span>
+      <span class="footer-copy">© 2026 · Designed &amp; Built by Indra</span>
       <div class="footer-links">
-        <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/indra0210/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-        <a href="https://leetcode.com/u/Indrakumar_V/" target="_blank" rel="noopener noreferrer" title="LeetCode"><i class="fas fa-code"></i></a>
-        <a href="https://tryhackme.com/p/indra02" target="_blank" rel="noopener noreferrer" title="TryHackMe"><i class="fas fa-user-secret"></i></a>
+        <a href="https://github.com/Indraik" target="_blank" rel="noopener noreferrer" title="GitHub"><i
+            class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/indra0210/" target="_blank" rel="noopener noreferrer" title="LinkedIn"><i
+            class="fab fa-linkedin"></i></a>
+        <a href="https://leetcode.com/u/Indrakumar_V/" target="_blank" rel="noopener noreferrer" title="LeetCode"><i
+            class="fas fa-code"></i></a>
+        <a href="https://tryhackme.com/p/indra02" target="_blank" rel="noopener noreferrer" title="TryHackMe"><i
+            class="fas fa-user-secret"></i></a>
       </div>
     </div>
   </footer>
+
+  <!-- SCREENSHOT LIGHTBOX MODAL -->
+  <div id="lightboxModal" class="lightbox-backdrop" aria-hidden="true" role="dialog" aria-label="Screenshot Preview">
+    <div class="lightbox-box">
+      <div class="lightbox-header">
+        <span class="lightbox-title" id="lightboxTitle"><i class="fas fa-camera"></i> Proof of Work Preview</span>
+        <button type="button" class="lightbox-close" id="closeLightbox" aria-label="Close screenshot preview"><i
+            class="fas fa-times"></i></button>
+      </div>
+      <div class="lightbox-content" id="lightboxContent"></div>
+      <p class="lightbox-caption" id="lightboxCaption"></p>
+    </div>
+  </div>
 
   <!-- COMMAND PALETTE MODAL (Ctrl+K) -->
   <div id="cmdPaletteModal" class="cmd-modal-backdrop" aria-hidden="true">
     <div class="cmd-modal-box">
       <div class="cmd-search-bar">
         <i class="fas fa-terminal cmd-search-icon"></i>
-        <input type="text" id="cmdInput" class="cmd-input" placeholder="Search commands, projects, skills (e.g. 'TamperTrace', 'CV', 'Copy Email')..." autocomplete="off" />
+        <input type="text" id="cmdInput" class="cmd-input"
+          placeholder="Search commands, projects, skills (e.g. 'TamperTrace', 'CV', 'Copy Email')..."
+          autocomplete="off" />
         <span class="cmd-badge">ESC</span>
       </div>
       <div class="cmd-results" id="cmdResults"></div>
@@ -824,10 +1141,11 @@
     <div class="arch-modal-box">
       <div class="arch-modal-header">
         <div class="arch-title-group">
-          <span class="arch-badge"><i class="fas fa-microchip"></i> System Architecture & Pipeline</span>
+          <span class="arch-badge"><i class="fas fa-microchip"></i> System Architecture &amp; Pipeline</span>
           <h3 id="archModalTitle">System Architecture</h3>
         </div>
-        <button type="button" class="arch-close-btn" id="closeArchModal" aria-label="Close architecture modal"><i class="fas fa-times"></i></button>
+        <button type="button" class="arch-close-btn" id="closeArchModal" aria-label="Close architecture modal"><i
+            class="fas fa-times"></i></button>
       </div>
       <div class="arch-modal-body" id="archModalBody"></div>
     </div>
@@ -848,9 +1166,9 @@
     if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
       document.querySelectorAll('.skill-card, .proj-card, .ach-card, .tl-card, .lab-card-full').forEach(card => {
         card.addEventListener('mousemove', (e) => {
-          const r  = card.getBoundingClientRect();
-          const rx = ((e.clientY - r.top  - r.height/2) / (r.height/2)) * -6;
-          const ry = ((e.clientX - r.left - r.width /2) / (r.width /2)) *  6;
+          const r = card.getBoundingClientRect();
+          const rx = ((e.clientY - r.top - r.height / 2) / (r.height / 2)) * -6;
+          const ry = ((e.clientX - r.left - r.width / 2) / (r.width / 2)) * 6;
           card.style.setProperty('--rx', rx.toFixed(2) + 'deg');
           card.style.setProperty('--ry', ry.toFixed(2) + 'deg');
         });
@@ -863,7 +1181,7 @@
 
     // Mobile Hamburger Toggle
     const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('nav-links');
+    const navLinks = document.getElementById('nav-links');
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('open');
       hamburger.classList.toggle('active');
@@ -968,7 +1286,7 @@
         const res = await fetch(`https://leetcode-api-faisalshohag.vercel.app/${username}`);
         if (!res.ok) throw new Error('API status not ok');
         const data = await res.parse ? await res.parse() : await res.json();
-        
+
         if (data && typeof data.totalSolved === 'number') {
           const total = data.totalSolved;
           const easy = data.easySolved ?? 162;
@@ -1252,8 +1570,8 @@
 
     function renderPaletteResults(query) {
       const q = query.toLowerCase().trim();
-      filteredActions = paletteActions.filter(item => 
-        item.title.toLowerCase().includes(q) || 
+      filteredActions = paletteActions.filter(item =>
+        item.title.toLowerCase().includes(q) ||
         item.category.toLowerCase().includes(q) ||
         item.id.toLowerCase().includes(q)
       );
@@ -1297,6 +1615,7 @@
       } else if (e.key === 'Escape') {
         closePalette();
         closeArchModalFunc();
+        closeLightbox();
       } else if (e.key === '/' && document.activeElement.tagName !== 'INPUT' && document.activeElement.tagName !== 'TEXTAREA') {
         e.preventDefault();
         openPalette();
@@ -1478,6 +1797,70 @@
         if (archKey) openArchModal(archKey);
       });
     });
+
+    // ── FEATURE 5: SCREENSHOT PROOF OF WORK LIGHTBOX MODAL ──
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxContent = document.getElementById('lightboxContent');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const closeLightboxBtn = document.getElementById('closeLightbox');
+
+    function openLightbox(title, caption, innerClone) {
+      if (!lightboxModal) return;
+      const titleEl = document.getElementById('lightboxTitle');
+      if (titleEl) titleEl.innerHTML = `<i class="fas fa-camera"></i> ${title}`;
+      if (lightboxCaption) lightboxCaption.textContent = caption || '';
+      if (lightboxContent) {
+        lightboxContent.innerHTML = '';
+        if (typeof innerClone === 'string') {
+          lightboxContent.innerHTML = innerClone;
+        } else if (innerClone) {
+          lightboxContent.appendChild(innerClone);
+        }
+      }
+      lightboxModal.classList.add('open');
+      lightboxModal.setAttribute('aria-hidden', 'false');
+    }
+
+    function closeLightbox() {
+      if (!lightboxModal) return;
+      lightboxModal.classList.remove('open');
+      lightboxModal.setAttribute('aria-hidden', 'true');
+    }
+
+    if (closeLightboxBtn) closeLightboxBtn.addEventListener('click', closeLightbox);
+    if (lightboxModal) {
+      lightboxModal.addEventListener('click', (e) => {
+        if (e.target === lightboxModal) closeLightbox();
+      });
+    }
+
+    document.querySelectorAll('.proj-screenshot-card').forEach(card => {
+      card.addEventListener('click', () => {
+        const caption = card.getAttribute('data-caption') || '';
+        const img = card.querySelector('.proj-screenshot-thumb img');
+        if (img) {
+          const fullImg = document.createElement('img');
+          fullImg.src = img.src;
+          fullImg.alt = img.alt || 'System Screenshot Proof of Work';
+          fullImg.className = 'lightbox-img';
+          openLightbox('System Proof of Work Preview', caption, fullImg);
+        } else {
+          const thumb = card.querySelector('.proj-screenshot-thumb');
+          if (thumb) {
+            const clone = thumb.cloneNode(true);
+            openLightbox('System Proof of Work Preview', caption, clone);
+          }
+        }
+      });
+    });
+
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeLightbox();
+        if (typeof closeArchModalFunc === 'function') closeArchModalFunc();
+      }
+    });
   </script>
 </body>
+
 </html>
